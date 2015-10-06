@@ -2,9 +2,9 @@ var taskList = document.querySelector('ul');
 var inputField = document.querySelector('[name="task"]');
 var form = document.querySelector('form');
 
-function OnSubmit(event) {
+function submitFormHandler(event) {
   if(inputField.value) {
-    var newTaskElement = CreateTaskElement(inputField.value);
+    var newTaskElement = createTaskElement(inputField.value);
     taskList.appendChild(newTaskElement)
     inputField.value = '';
   }
@@ -12,13 +12,13 @@ function OnSubmit(event) {
   event.preventDefault();
 }
 
-function GetNextTaskId() {
+function getNextTaskId() {
   var numberOfExistingtasks = document.querySelectorAll('li').length
   return 'task-' + (numberOfExistingtasks + 1);
 }
 
-function CreateTaskElement(taskDescription) {
-  var taskId = GetNextTaskId();
+function createTaskElement(taskDescription) {
+  var taskId = getNextTaskId();
 
   var taskElement = document.createElement('li')
 
@@ -35,5 +35,3 @@ function CreateTaskElement(taskDescription) {
 
   return taskElement;
 }
-
-form.onsubmit = OnSubmit;
