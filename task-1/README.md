@@ -12,7 +12,7 @@ Open `task-1.html` both in your browser and your code editor. Make sure changes 
 
 ## 2. "Hello world"
 
-To make our example webpage run JavaScript we need to add a `<script>` element. Add the following `<script>` element inside the `<body>` element:
+To make our example webpage run JavaScript we need to add a `<script>` element. Add the following `<script>` element just before the closing `</body>` element:
 
 ```html
 <script>
@@ -38,3 +38,10 @@ Make sure your `<script>` element is located below the `<p>` (paragraph) element
 Refresh your page. The result should be the text 'Hello Nerdschool' displaying in the paragraph below the heading.
 
 Try replacing the text with something else and refresh the page.
+
+### What happened here?
+
+In the first line we query the DOM via the `document` object, passing in a selector to find the first `<p>` element in the webpage. We then change the contents of the element by setting the `innerHTML` property.
+
+## Bonus task
+Try to insert `<button>` element inside the `<p>` element.

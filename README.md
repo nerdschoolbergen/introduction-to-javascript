@@ -28,6 +28,8 @@ This lesson contains a set of tasks organized in numbered folders. Each folder c
 - Task 3 - ?
 - Task 4 - ?
 
+Functions? Events? 
+
 ## Helpful resources
 - `javaScriptCheatSheet.js` - A file located at the root of this repository, containing a condensed overview of common Javascript syntax
 - [MDN - Mozilla Developer Network](https://developer.mozilla.org/en-US/)
