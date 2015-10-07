@@ -1,18 +1,22 @@
 body {
+  height: 750px;
   font-family: 'Montserrat', sans-serif;
-  width: 300px;
-  margin: 10% 50%;
   background-color: #223843;
-  background-image: url('../images/ron.png');
+  background-image: url('../images/ron2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
 }
 
 p {
-  font-size: 1.25em;
+  font-size: 2vw;
 }
 
 p#quote {
   font-style: italic;
+}
+
+.wrapper {
+  margin: 5% 4%;
+  width: 20%;
 }
