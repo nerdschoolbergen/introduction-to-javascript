@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+input {
+  padding: 10px;
+}
