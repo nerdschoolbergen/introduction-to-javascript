@@ -1,0 +1,18 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  width: 300px;
+  margin: 10% 50%;
+  background-color: #223843;
+  background-image: url('../images/ron.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+p {
+  font-size: 1.25em;
+}
+
+p#quote {
+  font-style: italic;
+}
