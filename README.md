@@ -23,12 +23,10 @@ Start by cloning this repository into a folder on your computer. If you've never
 ## Tasks
 This lesson contains a set of tasks organized in numbered folders. Each folder contains a `README.md` describing the task.
 
-- Task 1 - Hello world
-- Task 2 - ?
-- Task 3 - ?
-- Task 4 - ?
-
-Functions? Events? 
+- [Task 1 - Hello world](task-1/)
+- [Task 2 - TODO app](task-2/)
+- Task 3 - TBA
+- Task 4 - TBA
 
 ## Helpful resources
 - `javaScriptCheatSheet.js` - A file located at the root of this repository, containing a condensed overview of common Javascript syntax
