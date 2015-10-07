@@ -61,6 +61,7 @@ If we take a look at `task-2.html`, we find the following markup:
 When a user clicks the "Add" button or presses enter while the text field is in focus, a `submit` event is emitted from the `form` element. We can use this event to handle input from the user:
 
 ```javascript
+var taskList = document.querySelector('ul');
 var inputField = document.querySelector('[name="task"]');
 var form = document.querySelector('form');
 
