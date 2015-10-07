@@ -98,7 +98,7 @@ function createTaskElement(taskDescription) {
   checkboxElement.type = 'checkbox';
 
   var labelElement = document.createElement('label');
-  labelElement.appendChild(document.createTextNode(taskDescription))
+  labelElement.appendChild(document.createTextNode(taskDescription));
 
   taskElement.appendChild(checkboxElement);
   taskElement.appendChild(labelElement);
@@ -112,7 +112,7 @@ This function needs to be called each time the `submit` event is calling the `su
 ```javascript
 if(inputField.value) {
    var newTaskElement = createTaskElement(inputField.value);
-   taskList.appendChild(newTaskElement)
+   taskList.appendChild(newTaskElement);
    inputField.value = '';
 }
 ```
@@ -127,7 +127,7 @@ The checkbox needs to have a unique id and the label needs to have a for attribu
 function createTaskElement(taskDescription) {
   var taskId = 1;
 
-  var taskElement = document.createElement('li')
+  var taskElement = document.createElement('li');
 
   var checkboxElement = document.createElement('input');
   checkboxElement.type = 'checkbox';
@@ -135,7 +135,7 @@ function createTaskElement(taskDescription) {
 
   var labelElement = document.createElement('label');
   labelElement.setAttribute('for', taskId);
-  labelElement.appendChild(document.createTextNode(taskDescription))
+  labelElement.appendChild(document.createTextNode(taskDescription));
 
   taskElement.appendChild(checkboxElement);
   taskElement.appendChild(labelElement);
