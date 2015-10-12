@@ -6,29 +6,31 @@ You will learn how to:
  1. Use IIFEs (..what?), strict mode, and create objects and arrays
  2. Store data in the browser
 
-Open `task-3.html` in your browser and your code editor. Open `task-3.js` in your code editor as well.
+* Open `task-3.html` in your browser and your code editor. Open `task-3.js` in your code editor as well.
+* Copy the script you made from the previous task (`task-2.js`) into `task-3.js`
 
 ## 1. IIFEs, strict mode, objects and arrays
 
 ### IIFEs
 In JavaScript we have the concept of _Global scope_. In short terms this means that you can overwrite functions and variables declared in one script file from another script file (by mistake).
 
-To protect ourselves from polluting the _Global scope_ we create a scope to define our functions in. `IIFE` (Immediately Invoked Function Expression) is a function executed as soon as it is defined. This is very handy:
+**Note:** _Global scope_ is an anti-pattern and should be avoided as much as possible.
 
-**Note:** Global scope is an anti-pattern and should be avoided as much as possible.
+To protect ourselves from polluting the _Global scope_ we create a scope to define our functions in. `IIFE` (Immediately Invoked Function Expression) is a function executed as soon as it is defined. This is very handy:
 
 ```javascript
 (function() {
- // Your code goes here
+  'use strict'
+  // Your code goes here
 })();
 ```
-If you take a look at `task-3.js` you will see how this works in practice.
+* Wrap your code inside the function above to create your IIFE.
 
 ### Strict mode
 You also notice that we have added the statement `'use strict'` at the top of our `IIFE`. `strict mode` is a way of forcing the browser to evaluate our JavaScript in a stricter way by converting code mistakes to syntax errors among other things.
 
 ### Objects and arrays
-Before we start storing tasks in the browser we need to create a data structure for storing our tasks. Please refer to the `javaScriptCheatSheet.js` file for more in depth info on array and object syntax.
+Before we start storing data in the browser we need to create a data structure  representing our tasks. Please refer to the `javaScriptCheatSheet.js` file for more in depth info on array and object syntax.
 
 Declaring arrays is simple:
 
@@ -73,7 +75,7 @@ fruits[1] = anotherFruit;
 
 To implement a data structure for tasks:
 
-* Create an array to hold tasks
+* Create an array to hold tasks declared in your IFFE
 * Create a function called `addTasks` that takes `description` as a parameter
 that adds task objects to your array
 
@@ -108,6 +110,7 @@ var value = localStorage.getItem('key');
 ```
 
 * Try this out in your browser console.
+* Tip: The 'Resources' tab in Chrome Use Dev tools lets you inspect the `localStorage` object
 
 Values are limited to strings only. This leads us to a common problem in JavaScript applications. How to serialize and deserialize objects and arrays for storage and transfer to and from servers. The answer is `JSON` (JavaScript Object Notation). Try typing in the following in your browser console:
 ```javascript
@@ -133,7 +136,7 @@ We start by adding a function to store all tasks.
 
 * Add a call to this function to `submitFormHandler` and try running the code and add some tasks. To check if localStorage is updated, simply type `localStorage` into your JavaScript console.
 
-* Try refreshing the page. You will notice that `localStorage` is empty and all the tasks we added previously are gone.
+* Try refreshing the page. You will notice that the page still does not display tasks stored in `localStorage`.
 
 ### Reading from storage
 We need to retrieve our task data from `localStorage` on page load.
@@ -141,7 +144,7 @@ We need to retrieve our task data from `localStorage` on page load.
 * Create a function called `getStoredTasks`
   * Get the JSON string stored in the key `nerdschool-todo-tasks` from `localStorage`
   * Parse the JSON string and return the result
-* Lastly we need to call this function at page load, store the result in our `tasks` array and call `renderTasks`
+* Lastly we need to call this function at page load, store the result in our `tasks` array and call `renderTasks` inside the IFFE
 
 * Try refreshing the page again. The previously added tasks should be rendered.
 
