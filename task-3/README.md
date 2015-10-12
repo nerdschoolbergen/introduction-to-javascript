@@ -28,67 +28,61 @@ If you take a look at `task-3.js` you will see how this works in practice.
 You also notice that we have added the statement `'use strict'` at the top of our `IIFE`. `strict mode` is a way of forcing the browser to evaluate our JavaScript in a stricter way by converting code mistakes to syntax errors among other things.
 
 ### Objects and arrays
-Before we start storing tasks in the browser we need to create a data structure for storing our tasks. Please refer to the `javaScriptCheatSheet.js` file for more in depth info on array and object syntax.
+Before we start storing tasks in the browser we need to create a data structure for storing our tasks.
 
-Declaring arrays is simple:
+* Add this to your code:
 
 ```javascript
-var fruits = [];
+var tasks = [];
+
+function addTask(description) {
+  var taskId = tasks.length + 1;
+
+  var newTask = {
+    id: taskId,
+    description: description
+  };
+
+  tasks.push(newTask);
+}
 ```
 
-Arrays can store any object. Suppose we want to declare an object with the following properties:
- - name
- - amount
+We declare an empty `tasks` array, and a function `addTask` to add tasks to the array. 
 
-This can be done using the following syntax:
+* Create and call this function from `submitFormHandler`:
+
 ```javascript
-var aFruit = {
-  name: 'Apple',
-  amount: 2
-};
+function submitFormHandler(event) {
+  if(inputField.value) {
+    addTask(inputField.value);
+    inputField.value = '';
+    console.log(tasks);
+  }
+  event.preventDefault(); // Prevents the event from being handled by the browser
+}
 ```
 
-The `name` and `amount` property can then be accessed via `.`:
+* This should result in the console printing out our array of tasks each time a new one is added. But we still need a way to render the array of tasks into a set of `<li>` elements like in task 2:
+
 ```javascript
-var fruitName = aFruit.name;
-aFruit.amount = 3;
+function renderTasks() {
+  if(tasks.length === 0) {
+    return;
+  }
+
+  while (taskList.hasChildNodes()) {
+    taskList.removeChild(taskList.lastChild);
+  }
+
+  for (var i = 0; i < tasks.length; i++) {
+    taskList.appendChild(createTaskElement(tasks[i]));
+  }
+}
 ```
 
-Arrays can be manipulated using `pop` and `push`:
-```javascript
-fruits.push(aFruit);
-var aFruitCopy = fruits.pop();
-```
 
-They can also be accessed by index:
-```javascript
-var firstFruit = fruits[0];
-var anotherFruit = {
-  name: 'Orange',
-  amount: 5
-};
-fruits[1] = anotherFruit;
-```
-### Tasks data structure
+We first check if the tasks array has any entries. If not, the function returns. We then loop through all child nodes of the `<ul>` element and delete all of them. We then create the new `<li>` elements based on data stored in the tasks array objects.
 
-To implement a data structure for tasks:
-
-* Create an array to hold tasks
-* Create a function called `addTasks` that takes `description` as a parameter
-that adds task objects to your array
-
-To integrate the data structure with the rest of your code:
-* Call your `addTasks` function from `submitFormHandler` and log the value of `tasks` to console
-
-* This should result in the console printing out our array of tasks each time a new one is added.
-
-### Rendering data as markup
-We need a way to render the array of tasks into a set of `<li>` elements like in task 2.
-
-* Create a function called `renderTasks`
-  * Make the function return if the `tasks` array is empty
-  * Remove all `<li>` elements before inserting new ones
-  * Loop through all the tasks in your array and call `createTaskElement`
 * Add a call to this function from `submitFormHandler` and try running the code. This should result in the tasks being added to the list again.
 
 ## 2. Storing data in the browser
@@ -124,9 +118,7 @@ The console should output:
 
 ### Implementing storage
 
-We start by adding a function to store all tasks.
-
-* Create a function called
+We start by adding a function to store all tasks:
 
 ```javascript
 function storeAllTasks() {
@@ -141,7 +133,7 @@ function storeAllTasks() {
 
 * Add a call to this function to `submitFormHandler` and try running the code and add some tasks. To check if localStorage is updated, simply type `localStorage` into your JavaScript console.
 
-* Try refreshing the page. You will notice that `localStorage` is empty and all the tasks we added previously are gone.
+* Try refreshing the page. You will notice that `localStorage` is empty and all the tasks we added previously are gone. 
 
 * To fix this we need to retreive our task data from `localStorage` on page load:
 
