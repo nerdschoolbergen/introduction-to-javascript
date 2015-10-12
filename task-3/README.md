@@ -126,39 +126,24 @@ The console should output:
 
 We start by adding a function to store all tasks.
 
-* Create a function called
-
-```javascript
-function storeAllTasks() {
-  if(tasks.length === 0) {
-    return;
-  }
-
-  var jsonTasks = JSON.stringify(tasks);
-  localStorage.setItem('nerdschool-todo-tasks', jsonTasks);
-}
-```
+* Create a function called `storeAllTasks`
+  * Do a length check on the array and return if empty
+  * Convert the tasks array to a JSON string
+  * Use `localStorage` to store the JSON string in a key kalled `nerdschool-todo-tasks`
 
 * Add a call to this function to `submitFormHandler` and try running the code and add some tasks. To check if localStorage is updated, simply type `localStorage` into your JavaScript console.
 
 * Try refreshing the page. You will notice that `localStorage` is empty and all the tasks we added previously are gone.
 
-* To fix this we need to retreive our task data from `localStorage` on page load:
+### Reading from storage
+We need to retrieve our task data from `localStorage` on page load.
 
-```javascript
-function getStoredTasks() {
-  var jsonTasks = localStorage.getItem('nerdschool-todo-tasks');
-  return JSON.parse(jsonTasks);
-}
-```
-
-* Lastly we need to call this function at page load, store the result in our `tasks` array and render all tasks:
-
-```javascript
-tasks = getStoredTasks();
-renderTasks();
-```
+* Create a function called `getStoredTasks`
+  * Get the JSON string stored in the key `nerdschool-todo-tasks` from `localStorage`
+  * Parse the JSON string and return the result
+* Lastly we need to call this function at page load, store the result in our `tasks` array and call `renderTasks`
 
 * Try refreshing the page again. The previously added tasks should be rendered.
 
+### Extra exercise
 * This code is missing a feature. The state of the task (completed/not completed) is not stored, so checking a task and refreshing the page does nothing. Try fixing this on your own.
