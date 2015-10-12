@@ -29,6 +29,8 @@ This lesson contains a set of tasks organized in numbered folders. Each folder c
 - Task 4 - TBA
 
 ## Helpful resources
+**Note:** Avoid W3Schools.com. It's often outdated by today's JS specification. Use MDN instead.
+
 - `javaScriptCheatSheet.js` - A file located at the root of this repository, containing a condensed overview of common Javascript syntax
 - [MDN - Mozilla Developer Network](https://developer.mozilla.org/en-US/)
 - [Chrome Dev Tools](https://developers.google.com/web/tools/setup/workspace/setup-devtools?hl=en)
