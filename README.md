@@ -26,7 +26,7 @@ This lesson contains a set of tasks organized in numbered folders. Each folder c
 - [Warm-up](warm-up/)
 - [Task 1 - Hello world](task-1/)
 - [Task 2 - TODO app](task-2/)
-- [Task 2 - TODO app 2.0](task-3/)
+- [Task 3 - TODO app 2.0](task-3/)
 
 ## Helpful resources
 **Note:** Avoid W3Schools.com. It's often outdated by today's JS specification. Use MDN instead.
