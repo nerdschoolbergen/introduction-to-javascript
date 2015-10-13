@@ -30,7 +30,7 @@ To protect ourselves from polluting the _Global scope_ we create a scope to defi
 You also notice that we have added the statement `'use strict'` at the top of our `IIFE`. `strict mode` is a way of forcing the browser to evaluate our JavaScript in a stricter way by converting code mistakes to syntax errors among other things.
 
 ### Objects and arrays
-Before we start storing data in the browser we need to create a data structure  representing our tasks. Please refer to the `javaScriptCheatSheet.js` file for more in depth info on array and object syntax.
+Before we start storing data in the browser we need to create a data structure  representing our tasks. Please refer to  [javaScriptCheatSheet.js](../javaScriptCheatSheet.js) for more in depth info on array and object syntax.
 
 Declaring arrays is simple:
 
