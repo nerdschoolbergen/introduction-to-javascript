@@ -36,7 +36,7 @@ The DOM API has some convenient functions for manipulating and interacting with 
 ```javascript
 var list = document.querySelector('ul'); // Gets the first ul element found in the DOM
 var listItem = document.createElement('li'); // Create a new li element
-list.appendChild(listItem); // Adds the li element as the child in the ul list
+list.appendChild(listItem); // Adds the li element as a child of the ul element
 ```
 
 To register `buttonClickHandler` as a event listener:
@@ -57,24 +57,24 @@ We told the browser to send `click` events from the "Add" button to the `buttonC
 
 ## 2. Adding tasks to the list in the TODO app
 
-* Before starting, delete the code we added to `task-2.js` in the last exercise.
+* **Before starting, delete the code we added to `task-2.js` in the last exercise.**
 * Also review the `task-2.html` and `task-2.js` files to understand how it currently works and what is missing.
 
 ### Handling input from the user
 
-* In `task-2.js`, add:
-	* Query selector for getting the list (ul) element in the DOM
-	* Query selector for getting the input box element in the DOM by name
-	* Query selector for getting the form element in the DOM
-	* A function called `submitFormHandler` that takes an `event` parameter and logs it to the console.
-	* Add the function you just created above to the form as an event listener to the `submit` event.
+* In `task-2.js`, do the following:
+	* Find out how to query the DOM  for `ul` (list) elements and assign the result to a variable.
+	* Do the same for the text field element.
+	* Do the same for the `form` element as well.
+	* Declare a function called `submitFormHandler` that takes an `event` parameter and logs it to the console.
+	* Register the `submitFormHandler` you just declared as an event listener on the `form` element, listening for `submit` events.
 
 * Type something into the input box and click "Add". You should see the text you typed in to the input box displayed in the JavaScript console.
 
 ### Creating tasks
 
 When the user submits the task a new `<li>` element should be added to the bottom of the list.
-* To do this, add a new function called `createTaskElement` which takes the description (the user input) as a parameter.
+* To do this, add a new function called `createTaskElement` which takes the description (the user input) as a parameter. Inside the function:
 	* Create a new list element (`<li>`)
 	* Create a new input element of type checkbox
 	* Create a new label element (this is the text for the checkbox)
