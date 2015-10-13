@@ -62,12 +62,12 @@ We told the browser to send `click` events from the "Add" button to the `buttonC
 
 ### Handling input from the user
 
-* In `task-2.js`, add:
-	* Query selector for getting the list (ul) element in the DOM
-	* Query selector for getting the input box element in the DOM by name
-	* Query selector for getting the form element in the DOM
-	* A function called `submitFormHandler` that takes an `event` parameter and logs it to the console.
-	* Add the function you just created above to the form as an event listener to the `submit` event.
+* In `task-2.js`, do the following:
+	* Find out how to query the DOM  for `ul` (list) elements and assign the result to a variable.
+	* Do the same for the text field element.
+	* Do the same for the `form` element as well.
+	* Declare a function called `submitFormHandler` that takes an `event` parameter and logs it to the console.
+	* Register the `submitFormHandler` you just declared as an event listener on the `form` element, listening for `submit` events.
 
 * Type something into the input box and click "Add". You should see the text you typed in to the input box displayed in the JavaScript console.
 
