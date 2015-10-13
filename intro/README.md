@@ -8,7 +8,7 @@ You will learn how to:
 
 ## 1. Dev environment
 
-* Open `task-1.html` both in your browser and your code editor. Make sure changes to the HTML file are reflected in the browser.
+* Open `intro.html` both in your browser and your code editor. Make sure changes to the HTML file are reflected in the browser.
 
 ## 2. "Hello world"
 
