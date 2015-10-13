@@ -7,9 +7,9 @@ var input = prompt('Enter something here'); // Displays a pop-up textbox in the 
 document.write(<TEXT>); // Writes to the document/page
 ```
 
-* In the `scripts` folder, create a new file named `task-5.js`.
-* In `task-5.html`, add a script tag just before `</body>`. A script tag example: `<script src="path/to/.js/file"></script>`
-* In `task-5.js`, make a IFFE
+* In the `scripts` folder, create a new file named `warmup.js`.
+* In `warmup.html`, add a script tag just before `</body>`. A script tag example: `<script src="path/to/.js/file"></script>`
+* In `warmup.js`, make a IFFE
 
 **Find the highest number**
 
