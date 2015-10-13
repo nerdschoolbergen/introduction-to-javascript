@@ -36,7 +36,7 @@ The DOM API has some convenient functions for manipulating and interacting with 
 ```javascript
 var list = document.querySelector('ul'); // Gets the first ul element found in the DOM
 var listItem = document.createElement('li'); // Create a new li element
-list.appendChild(listItem); // Adds the li element as the child in the ul list
+list.appendChild(listItem); // Adds the li element as a child of the ul element
 ```
 
 To register `buttonClickHandler` as a event listener:
