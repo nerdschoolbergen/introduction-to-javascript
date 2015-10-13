@@ -57,7 +57,7 @@ We told the browser to send `click` events from the "Add" button to the `buttonC
 
 ## 2. Adding tasks to the list in the TODO app
 
-* Before starting, delete the code we added to `task-2.js` in the last exercise.
+* **Before starting, delete the code we added to `task-2.js` in the last exercise.**
 * Also review the `task-2.html` and `task-2.js` files to understand how it currently works and what is missing.
 
 ### Handling input from the user
