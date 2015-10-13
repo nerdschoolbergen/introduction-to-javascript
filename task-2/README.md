@@ -74,7 +74,7 @@ We told the browser to send `click` events from the "Add" button to the `buttonC
 ### Creating tasks
 
 When the user submits the task a new `<li>` element should be added to the bottom of the list.
-* To do this, add a new function called `createTaskElement` which takes the description (the user input) as a parameter.
+* To do this, add a new function called `createTaskElement` which takes the description (the user input) as a parameter. Inside the function:
 	* Create a new list element (`<li>`)
 	* Create a new input element of type checkbox
 	* Create a new label element (this is the text for the checkbox)
