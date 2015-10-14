@@ -67,6 +67,7 @@ We told the browser to send `click` events from the "Add" button to the `buttonC
 	* Do the same for the text field element.
 	* Do the same for the `form` element as well.
 	* Declare a function called `submitFormHandler` that takes an `event` parameter and logs it to the console.
+	* **Important: in the `submitFormHandler` function, call `event.preventDefault()` as the last action in the function.** This is to prevent the submit event from "bubbling up" to the browser and refreshing the page.
 	* Register the `submitFormHandler` you just declared as an event listener on the `form` element, listening for `submit` events.
 
 * Type something into the input box and click "Add". You should see the text you typed in to the input box displayed in the JavaScript console.
