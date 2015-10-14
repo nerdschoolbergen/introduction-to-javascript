@@ -23,11 +23,11 @@ To make our example webpage run JavaScript we need to add a `<script>` element.
 
 * Refresh your page (hit `F5` or `CTRL+R`/ `CMD+R`). 
 
-The result should be a box popping up saying 'Hello world!'. How exiting!
+The result should be a box popping up saying 'Hello world!'. How exciting!
 
 ## 3. Interacting with the DOM
 
-All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipulating webpage markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the webpage is represented as a node in the tree.
+All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipule the webpage markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the webpage is represented as a node in the tree.
 
 We are going to use a DOM API method called `querySelector` to replace some text in the webpage. 
 
@@ -42,11 +42,11 @@ Make sure your `<script>` element is located below the `<p>` (paragraph) element
 
 * Refresh your page. The result should be the text 'Hello Nerdschool' displaying in the paragraph below the heading.
 
-* Try replacing the text with something else and refresh the page.
+* Try replacing the text with something else, then refreshing the page.
 
 ### What happened here?
 
 In the first line we query the DOM via the `document` object, passing in a _selector_ to find the first `<p>` element in the webpage. We then change the contents of the element by setting the `innerHTML` property.
 
 ## Optional task
-* Try to insert `<button>` element inside the `<p>` element.
+* Try to insert a `<button>` element inside the `<p>` element.
