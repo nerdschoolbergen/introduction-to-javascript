@@ -1,93 +1,152 @@
-# Task 2 - TODO app
+# Task 2 - TODO App 2.0
 
-Now it gets more exiting. We are going to create a very simple TODO app where users can add tasks and check tasks as completed.
+In this task we are going to expand the TODO app to make it more useful by enabling storage of tasks in the browser.
 
 You will learn how to:
- 1. Declare functions and handle events from the browser
- 2. Create and insert a set of elements with attributes and text into the webpage
+ 1. Use IIFEs (..what?), strict mode, and create objects and arrays
+ 2. Store data in the browser
 
-The webpage for this example set up using separate files for JavaScript and CSS, to separate styling and scripts from the markup. the `css` folder contains the styles, and `scripts` folder contains the JavaScript.
+* Open `task-2.html` in your browser and your code editor. Open `task-2.js` in your code editor as well.
+* Copy the script you made from the previous task (`task-2.js`) into `task-2.js`
 
-Open `task-2.html` in your browser and your code editor.
+## 1. IIFEs, strict mode, objects and arrays
 
-## 1. Functions and events
-Functions in JavaScript are so called first-class, which means they are objects and can be manipulated and passed around just like any other object.
+### IIFEs
+In JavaScript we have the concept of _Global scope_. In short terms this means that you can overwrite functions and variables declared in one script file from another script file (by mistake).
 
-The browser emits various types of _events_ based on user actions (scrolling, clicking, hovering, etc), incidents occurring while the page is preparing to be displayed (DOM finished parsing, images and resources done loading), and much more.
+**Note:** _Global scope_ is an anti-pattern and should be avoided as much as possible.
 
-To make our code respond to events we need to declare a function to handle the event.
-
-For example:
-
-```javascript
-function buttonClickHandler(event) {
-  alert('Click event!');
-  console.log('event:', event);
-}
-```
-
-This is the html for a submit button:
-```html
-<input type="submit" value="Add" />
-```
-
-The DOM API has some convenient functions for manipulating and interacting with the page, such as:
+To protect ourselves from polluting the _Global scope_ we create a scope to define our functions in. `IIFE` (Immediately Invoked Function Expression) is a function executed as soon as it is defined. This is very handy:
 
 ```javascript
-var list = document.querySelector('ul'); // Gets the first ul element found in the DOM
-var listItem = document.createElement('li'); // Create a new li element
-list.appendChild(listItem); // Adds the li element as a child of the ul element
+(function() {
+  'use strict'
+  // Your code goes here
+})();
 ```
+* Wrap your code inside the function above to create your IIFE.
 
-To register `buttonClickHandler` as a event listener:
+### Strict mode
+You also notice that we have added the statement `'use strict'` at the top of our `IIFE`. `strict mode` is a way of forcing the browser to evaluate our JavaScript in a stricter way by converting code mistakes to syntax errors among other things.
+
+### Objects and arrays
+Before we start storing data in the browser we need to create a data structure  representing our tasks. Please refer to  [javaScriptCheatSheet.js](../javaScriptCheatSheet.js) for more in depth info on array and object syntax.
+
+Declaring arrays is simple:
 
 ```javascript
-function buttonClickHandler(clickEvent){
-	console.log('In click event');
-}
-var buttonElement = document.querySelector('input[type="submit"]');
-buttonElement.addEventListener('click', buttonClickHandler);
+var fruits = [];
 ```
 
-Use the examples above when solving the tasks below.
+Arrays can store any object. Suppose we want to declare an object with the following properties:
+ - name
+ - amount
 
-### What happened here?
+This can be done using the following syntax:
+```javascript
+var aFruit = {
+  name: 'Apple',
+  amount: 2
+};
+```
 
-We told the browser to send `click` events from the "Add" button to the `buttonClickHandler` function we declared earlier. The browser passed in the event which triggered the handler to the handler, and we printed out a message to console containing the event.
+The `name` and `amount` property can then be accessed via `.`:
+```javascript
+var fruitName = aFruit.name;
+aFruit.amount = 3;
+```
 
-## 2. Adding tasks to the list in the TODO app
+Arrays can be manipulated using `pop` and `push`:
+```javascript
+fruits.push(aFruit);
+var aFruitCopy = fruits.pop();
+```
 
-* **Before starting, delete the code we added to `task-2.js` in the last exercise.**
-* Also review the `task-2.html` and `task-2.js` files to understand how it currently works and what is missing.
+They can also be accessed by index:
+```javascript
+var firstFruit = fruits[0];
+var anotherFruit = {
+  name: 'Orange',
+  amount: 5
+};
+fruits[1] = anotherFruit;
+```
+### Tasks data structure
 
-### Handling input from the user
+To implement a data structure for tasks:
 
-* In `task-2.js`, do the following:
-	* Find out how to query the DOM  for `ul` (list) elements and assign the result to a variable.
-	* Do the same for the text field element.
-	* Do the same for the `form` element as well.
-	* Declare a function called `submitFormHandler` that takes an `event` parameter and logs it to the console.
-	* Register the `submitFormHandler` you just declared as an event listener on the `form` element, listening for `submit` events.
+* Create an array to hold tasks declared in your IFFE
+* Create a function called `addTasks` that takes `description` as a parameter
+that adds task objects to your array
 
-* Type something into the input box and click "Add". You should see the text you typed in to the input box displayed in the JavaScript console.
+To integrate the data structure with the rest of your code:
+* Call your `addTasks` function from `submitFormHandler` and log the value of `tasks` to console
 
-### Creating tasks
+* This should result in the console printing out our array of tasks each time a new one is added.
 
-When the user submits the task a new `<li>` element should be added to the bottom of the list.
-* To do this, add a new function called `createTaskElement` which takes the description (the user input) as a parameter. Inside the function:
-	* Create a new list element (`<li>`)
-	* Create a new input element of type checkbox
-	* Create a new label element (this is the text for the checkbox)
-		* The label must have a child node with text (the todo-description text the user inputs)
-	* Append the checkbox element and the label element to the list element
-	* Return the list element from the function.
+### Rendering data as markup
+We need a way to render the array of tasks into a set of `<li>` elements like in task 2.
 
-This function needs to be called each time the `submit` event is calling the `submitFormHandler` function.
+* Create a function called `renderTasks`
+  * Make the function return if the `tasks` array is empty
+  * Remove all `<li>` elements before inserting new ones
+  * Loop through all the tasks in your array and call `createTaskElement`
+* Add a call to this function from `submitFormHandler` and try running the code. This should result in the tasks being added to the list again.
 
-* In the `submitFormHandler` function, add:
-	* Call the `createTaskElement` function
-	* Append the list element (return object from createTaskElement) to the task list (`<ul>`)
-	* Reset the value (text) of the input element to a empty string.
+## 2. Storing data in the browser
 
-* Try out the new code. You should be able to add tasks to the list.
-* Try inspecting the markup using the browser dev tools while adding tasks to see what happens to the DOM.
+Each time we refresh the page we loose the data we added. To fix this we need to persist the data somewhere. The simplest way is to use the Web Storage API provided by modern browsers. We will use `localStorage` for this example.
+
+Using `localStorage` is simple. To set data:
+
+```javascript
+localStorage.setItem('key', 'value');
+```
+
+To retreive data:
+
+```javascript
+var value = localStorage.getItem('key');
+```
+
+* Try this out in your browser console.
+* Tip: The 'Resources' tab in Chrome Use Dev tools lets you inspect the `localStorage` object
+
+Values are limited to strings only. This leads us to a common problem in JavaScript applications. How to serialize and deserialize objects and arrays for storage and transfer to and from servers. The answer is `JSON` (JavaScript Object Notation). Try typing in the following in your browser console:
+```javascript
+JSON.stringify({a: 1, b: 2, c: [1,2,3]});
+```
+
+The console should output:
+
+```json
+{"a":1,"b":2,"c":[1,2,3]}
+```
+
+* Try passing in the string above into the `JSON.parse()` function. Remember to wrap the string in single quotes. The console should output the parsed object.
+
+### Implementing storage
+
+We start by adding a function to store all tasks.
+
+* Create a function called `storeAllTasks`
+  * Do a length check on the array and return if empty
+  * Convert the tasks array to a JSON string
+  * Use `localStorage` to store the JSON string in a key kalled `nerdschool-todo-tasks`
+
+* Add a call to this function to `submitFormHandler` and try running the code and add some tasks. To check if localStorage is updated, simply type `localStorage` into your JavaScript console.
+
+* Try refreshing the page. You will notice that the page still does not display tasks stored in `localStorage`.
+
+### Reading from storage
+We need to retrieve our task data from `localStorage` on page load.
+
+* Create a function called `getStoredTasks`
+  * Get the JSON string stored in the key `nerdschool-todo-tasks` from `localStorage`
+  * Parse the JSON string and return the result
+* Lastly we need to call this function at page load, store the result in our `tasks` array and call `renderTasks` inside the IFFE
+
+* Try refreshing the page again. The previously added tasks should be rendered.
+
+### Extra exercise
+* This code is missing a feature. The state of the task (completed/not completed) is not stored, so checking a task and refreshing the page does nothing. Try fixing this on your own.
