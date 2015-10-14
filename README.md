@@ -21,12 +21,12 @@ This lesson is oriented around teaching you how to use Javascript client-side in
 Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the the "Download ZIP" button to the right.
 
 ## Tasks
-This lesson contains a set of tasks organized in numbered folders. Each folder contains a `README.md` describing the task.
+This lesson contains a set of tasks organized in folders. Each folder contains a `README.md` describing the task.
 
 - [Introduction](intro/)
 - [Warm-up](warm-up/)
-- [Task 2 - TODO app](task-2/)
-- [Task 3 - TODO app 2.0](task-3/)
+- [Task 1 - TODO app](task-1/)
+- [Task 2 - TODO app 2.0](task-2/)
 
 ## Helpful resources
 **Note:** Avoid W3Schools.com. It's often outdated by today's JS specification. Use MDN instead.
