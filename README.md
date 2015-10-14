@@ -24,6 +24,7 @@ Start by cloning this repository into a folder on your computer. If you've never
 This lesson contains a set of tasks organized in numbered folders. Each folder contains a `README.md` describing the task.
 
 - [Introduction](intro/)
+- [Warm-up](warm-up/)
 - [Task 2 - TODO app](task-2/)
 - [Task 3 - TODO app 2.0](task-3/)
 
