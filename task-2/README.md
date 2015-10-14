@@ -1,177 +1,156 @@
-# Task 2 - TODO app
+# Task 2 - TODO App 2.0
 
-Now it gets more exiting. We are going to create a very simple TODO app where users can add tasks and check tasks as completed.
+In this task we are going to expand the TODO app to make it more useful by enabling storage of tasks in the browser.
 
 You will learn how to:
- 1. Declare functions and handle events from the browser
- 2. Create and insert a set of elements with attributes and text into the webpage
+ 1. Use IIFEs (..what?), strict mode, and create objects and arrays
+ 2. Store data in the browser
 
-The webpage for this example set up using separate files for JavaScript and CSS, to separate styling and scripts from the markup. the `css` folder contains the styles, and `scripts` folder contains the JavaScript.
+Open `task-2.html` in your browser and your code editor. Open `task-2.js` in your code editor as well.
 
-Open `task-2.html` in your browser and your code editor.
+## 1. IIFEs, strict mode, objects and arrays
 
-## 1. Functions and events
-Functions in JavaScript are so called first-class, which means they are objects and can be manipulated and passed around just like any other object.
+### IIFEs
+In JavaScript we have the concept of _Global scope_. In short terms this means that you can overwrite functions and variables declared in one script file from another script file (by mistake).
 
-The browser emits various types of _events_ based on user actions (scrolling, clicking, hovering, etc), incidents occurring while the page is preparing to be displayed (DOM finished parsing, images and resources done loading), and much more.
+To protect ourselves from polluting the _Global scope_ we create a scope to define our functions in. `IIFE` (Immediately Invoked Function Expression) is a function executed as soon as it is defined. This is very handy:
 
-To make our code respond to events we need to declare a function to handle the event.
-
-* Add this code to `task-2.js`:
+**Note:** Global scope is an anti-pattern and should be avoided as much as possible.
 
 ```javascript
-function buttonClickHandler(event) {
-  alert('Click event!');
-  console.log('event:', event);
+(function() {
+ // Your code goes here
+})();
+```
+If you take a look at `task-2.js` you will see how this works in practice.
+
+### Strict mode
+You also notice that we have added the statement `'use strict'` at the top of our `IIFE`. `strict mode` is a way of forcing the browser to evaluate our JavaScript in a stricter way by converting code mistakes to syntax errors among other things.
+
+### Objects and arrays
+Before we start storing tasks in the browser we need to create a data structure for storing our tasks.
+
+* Add this to your code:
+
+```javascript
+var tasks = [];
+
+function addTask(description) {
+  var taskId = tasks.length + 1;
+
+  var newTask = {
+    id: taskId,
+    description: description
+  };
+
+  tasks.push(newTask);
 }
 ```
 
-The page contains the following submit button markup:
-```html
-<input type="submit" value="Add" />
-```
+We declare an empty `tasks` array, and a function `addTask` to add tasks to the array. 
 
-* To register `buttonClickHandler` as a event listener, add the following code:
+* Create and call this function from `submitFormHandler`:
 
 ```javascript
-var buttonElement = document.querySelector('input[type="submit"]');
-buttonElement.addEventListener('click', buttonClickHandler);
-```
-
-* Save `task-2.js` and refresh the webpage.
-* Try clicking the `Add` button, this should result in an popup box displaying.
-* Open up the JavaScript console. The console should be displaying the text 'event:' and a `MouseEvent`.
-
-### What happened here?
-
-We told the browser to send `click` events from the "Add" button to the `buttonClickHandler` function we declared earlier. The browser passed in the event which triggered the handler to the handler, and we printed out a message to console containing the event.
-
-## 2. Adding tasks to the task list
-
-* Before starting, delete the code we added to `task-2.js` in the last exercise.
-
-### Handling input from the user
-
-If we take a look at `task-2.html`, we find the following markup:
-
-```html
-<form>
-  <input type="text" name="task" placeholder="Task description"></input>
-  <input type="submit" value="Add" />
-</form>
-```
-
-When a user clicks the "Add" button or presses enter while the text field is in focus, a `submit` event is emitted from the `form` element. We can use this event to handle input from the user.
-
-* Add this code to `task-2.js` and refresh your browser:
-
-```javascript
-var taskList = document.querySelector('ul');
-var inputField = document.querySelector('[name="task"]');
-var form = document.querySelector('form');
-
 function submitFormHandler(event) {
-  console.log(inputField.value);
-  event.preventDefault();
+  if(inputField.value) {
+    addTask(inputField.value);
+    inputField.value = '';
+    console.log(tasks);
+  }
+  event.preventDefault(); // Prevents the event from being handled by the browser
 }
-
-form.addEventListener('submit', submitFormHandler);
 ```
 
-* Type something into the input box and click "Add". You should see the text you typed in to the input box displayed in the JavaScript console.
-
-### Creating tasks
-
-The task list is represented as `<li>` elements containing a `<input>` of type `checkbox` and a `<label>`:
-
-```html
-<ul>
-  <li>
-    <input type="checkbox" id="task-1">
-    <label for="task-1">Learn Javascript</label>
-  </li>
-</ul>
-```
-
-When the user submits the task a new `<li>` element should be added to the bottom of the list. 
-
-* To do this we declare a function:
+* This should result in the console printing out our array of tasks each time a new one is added. But we still need a way to render the array of tasks into a set of `<li>` elements like in task 2:
 
 ```javascript
-function createTaskElement(taskDescription) {
-  var taskElement = document.createElement('li')
+function renderTasks() {
+  if(tasks.length === 0) {
+    return;
+  }
 
-  var checkboxElement = document.createElement('input');
-  checkboxElement.type = 'checkbox';
+  while (taskList.hasChildNodes()) {
+    taskList.removeChild(taskList.lastChild);
+  }
 
-  var labelElement = document.createElement('label');
-  labelElement.appendChild(document.createTextNode(taskDescription));
-
-  taskElement.appendChild(checkboxElement);
-  taskElement.appendChild(labelElement);
-
-  return taskElement;
+  for (var i = 0; i < tasks.length; i++) {
+    taskList.appendChild(createTaskElement(tasks[i]));
+  }
 }
 ```
 
-This function needs to be called each time the `submit` event is calling the `submitFormHandler` function. 
 
-* Add the following to `submitFormHandler` on the line after the `console.log` statement:
+We first check if the tasks array has any entries. If not, the function returns. We then loop through all child nodes of the `<ul>` element and delete all of them. We then create the new `<li>` elements based on data stored in the tasks array objects.
+
+* Add a call to this function from `submitFormHandler` and try running the code. This should result in the tasks being added to the list again.
+
+## 2. Storing data in the browser
+
+Each time we refresh the page we loose the data we added. To fix this we need to persist the data somewhere. The simplest way is to use the Web Storage API provided by modern browsers. We will use `localStorage` for this example.
+
+Using `localStorage` is simple. To set data:
 
 ```javascript
-if(inputField.value) {
-   var newTaskElement = createTaskElement(inputField.value);
-   taskList.appendChild(newTaskElement);
-   inputField.value = '';
-}
+localStorage.setItem('key', 'value');
 ```
 
-Notice that we treat the `value` attribute of the `inputField` element as a boolean in the `if` statement. JavaScript has the weird concept of "truthy/falsy" values. To quote from MDN Glossary: 
-
-> In JavaScript, a truthy value is a value that translates to true when evaluated in a Boolean context. All values are truthy unless they are defined as falsy (i.e., except for `false`, `0`, `""`, `null`, `undefined`, and `NaN`).
-
-This is instead of doing a `typeof inputfield.value !== 'undefined'` check and `inputField.value !== null` check in the `if` statement.
-
-* Try out the new code. You should be able to add tasks to the list. 
-* Try inspecting the markup using the browser dev tools while adding tasks to see what happens to the DOM.
-
-The checkbox needs to have a unique id and the label needs to have a for attribute with the same id to make the label clickable. 
-
-* To fix this we need to alter the `createTaskElement` function:
+To retreive data:
 
 ```javascript
-function createTaskElement(taskDescription) {
-  var taskId = 1;
-
-  var taskElement = document.createElement('li');
-  
-  //TODO: setAttribute
-  var checkboxElement = document.createElement('input');
-  checkboxElement.type = 'checkbox';
-  checkboxElement.id = taskId;
-
-  var labelElement = document.createElement('label');
-  labelElement.setAttribute('for', taskId);
-  labelElement.appendChild(document.createTextNode(taskDescription));
-
-  taskElement.appendChild(checkboxElement);
-  taskElement.appendChild(labelElement);
-
-  return taskElement;
-}
+var value = localStorage.getItem('key');
 ```
-Notice that we set the `id` attribute of the `checkboxElement` and the `for` attribute of the `labelElement` using the `setAttribute` function.
 
-* Try out the new code again. You may notice some weird behaviour &ndash; if you add multiple tasks they get the same id, and this causes problems when you try clicking the label. To fix this we need to set the `taskId` to a unique value.
-* Try modifying the code yourself to do this. Here is one possible solution:
+* Try this out in your browser console.
+
+Values are limited to strings only. This leads us to a common problem in JavaScript applications. How to serialize and deserialize objects and arrays for storage and transfer to and from servers. The answer is `JSON` (JavaScript Object Notation). Try typing in the following in your browser console:
+```javascript
+JSON.stringify({a: 1, b: 2, c: [1,2,3]});
+```
+
+The console should output:
+
+```json
+{"a":1,"b":2,"c":[1,2,3]}
+```
+
+* Try passing in the string above into the `JSON.parse()` function. Remember to wrap the string in single quotes. The console should output the parsed object.
+
+### Implementing storage
+
+We start by adding a function to store all tasks:
 
 ```javascript
-function getNextTaskId() {
-  var numberOfExistingtasks = document.querySelectorAll('li').length;
-  return 'task-' + (numberOfExistingtasks + 1);
+function storeAllTasks() {
+  if(tasks.length === 0) {
+    return;
+  }
+
+  var jsonTasks = JSON.stringify(tasks);
+  localStorage.setItem('nerdschool-todo-tasks', jsonTasks);
 }
 ```
 
-This function counts the number of `<li>` elements in the document using the `Element.querySelectorAll` function, which an `Array` of all elements matching the selector. In order to get the count we call `Array.length`.
+* Add a call to this function to `submitFormHandler` and try running the code and add some tasks. To check if localStorage is updated, simply type `localStorage` into your JavaScript console.
 
-* Test this function by adding it to the code and calling it from `createTaskElement`. The result should be that each checkbox is assigned a unique id and the labels function properly.
+* Try refreshing the page. You will notice that `localStorage` is empty and all the tasks we added previously are gone. 
+
+* To fix this we need to retreive our task data from `localStorage` on page load:
+
+```javascript
+function getStoredTasks() {
+  var jsonTasks = localStorage.getItem('nerdschool-todo-tasks');
+  return JSON.parse(jsonTasks);
+}
+```
+
+* Lastly we need to call this function at page load, store the result in our `tasks` array and render all tasks:
+
+```javascript
+tasks = getStoredTasks();
+renderTasks();
+```
+
+* Try refreshing the page again. The previously added tasks should be rendered.
+
+* This code is missing a feature. The state of the task (completed/not completed) is not stored, so checking a task and refreshing the page does nothing. Try fixing this on your own.
