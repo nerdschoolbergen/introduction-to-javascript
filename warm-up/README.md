@@ -9,17 +9,16 @@ document.write(<TEXT>); // Writes to the document/page
 
 * In the `scripts` folder, create a new file named `warmup.js`.
 * In `warmup.html`, add a script tag in the `<body>`. A script tag example: `<script src="path/to/.js/file"></script>`
-* In `warmup.js`, make a IFFE
 
 **Find the highest number**
 
-* Inside the IFFE, create a function named `findHighestNum` which takes no parameters. 
-* This function will continuously prompt the user for a number and remember the highest number found until the user enters zero. Tip: probably need to convert the input _string_ to _number_
-* When zero is entered it should print the highest number to the screen.
+* Inside `warmup.js`, create a function named `findHighestNum` which takes no parameters. 
+* This function will continuously prompt the user for a number and remember the highest number found until the user enters zero. Tip: probably need to convert the input _string_ to a _number_ of some kind
+* When zero is entered, the loop should exit and it should print the highest number to the screen.
 
 **Count letters in text**
 
-* Inside the IFFE, create a function named `countLetters` which takes no parameters.
+* Inside `warmup.js`, create a function named `countLetters` which takes no parameters.
 * Go to http://www.lipsum.com/feed/html and copy a paragraph of dummy text from the page. It doesn't matter which one.
 * Inside the function, create a variable to hold the text.
 * Prompt the user for input, which should be a single letter. This value, if valid, should be given as parameter to the function you create next:
