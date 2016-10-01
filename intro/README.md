@@ -8,11 +8,13 @@ You will learn how to:
 
 ## 1. Dev environment
 
+![Intro-1](../intro-1.gif)
+
 * Open `intro.html` both in your browser and your code editor. Make sure changes to the HTML file are reflected in the browser.
 
 ## 2. "Hello world"
 
-To make our example webpage run JavaScript we need to add a `<script>` element. 
+To make our example webpage run JavaScript we need to add a `<script>` element.
 * Add the following `<script>` element just before the closing `</body>` element:
 
 ```html
@@ -21,15 +23,17 @@ To make our example webpage run JavaScript we need to add a `<script>` element.
 </script>
 ```
 
-* Refresh your page (hit `F5` or `CTRL+R`/ `CMD+R`). 
+* Refresh your page (hit `F5` or `CTRL+R`/ `CMD+R`).
 
 The result should be a box popping up saying 'Hello world!'. How exciting!
 
+![Intro-2](../intro-2.png)
+
 ## 3. Interacting with the DOM
 
-All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipule the webpage markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the webpage is represented as a node in the tree.
+All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipulate the webpage markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the webpage is represented as a node in the tree.
 
-We are going to use a DOM API method called `querySelector` to replace some text in the webpage. 
+We are going to use a DOM API method called `querySelector` to replace some text in the webpage.
 
 * Replace the contents of the `<script>` element we created in the last example with the following code:
 
@@ -41,6 +45,8 @@ paragraph.innerHTML = 'Hello Nerdschool';
 Make sure your `<script>` element is located below the `<p>` (paragraph) element.
 
 * Refresh your page. The result should be the text 'Hello Nerdschool' displaying in the paragraph below the heading.
+
+  ![Intro-3](../intro-3.png)
 
 * Try replacing the text with something else, then refreshing the page.
 
