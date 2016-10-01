@@ -3,12 +3,8 @@
 # Introduction to JavaScript
 JavaScript is the most used language today, and there is no escaping it. Learn the basics in this lesson.
 
-## What is JavaScript?
-JavaScript or (ECMAscript) is a programming language mostly used client-side to dynamically script webpages, but often also server-side. JavaScript is not related to Java.
+## [Open presentation slides](https://docs.google.com/presentation/d/1pw1vndugBl9NElaYg2_t0itNoGZwmiBW8cxwZkkjLP4/edit?usp=sharing)
 
-JavaScript is mostly used in the browser, enabling developers to manipulate webpage content using the DOM, send and receive data via AJAX, draw graphics using canvas, interact with the device running the browser, and so on.
-
-JavaScript can also be used server-side, using [Node.js](https://nodejs.org/en/), enabling developers to build fully functional web applications using a feature rich collection of core modules that handles file system I/O, networking, streams, and more.
 
 ## Focus of this lesson
 This lesson is oriented around teaching you how to use Javascript client-side in the browser. In order to get the most out of the lesson it helps if you have some past experience with web technologies such as HTML and HTTP.
