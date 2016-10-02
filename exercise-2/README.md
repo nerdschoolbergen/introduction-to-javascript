@@ -59,7 +59,15 @@ You will learn how to:
 
 ## 2. Chrome DevTools &ndash; The _Elements_ panel
 
-We can use the Elements panel in Chrome DevTools to make changes to the DOM (and CSS) on the fly in the browser
+We can use the Elements panel in Chrome DevTools to make changes to the DOM (and CSS) on the fly in the browser.
+
+* Open the Chrome Dev Tools by doing one of the following:
+  - Select **More Tools > Developer Tools** from the Chrome Menu.
+  - Right-click on a page element and select Inspect
+  - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
+* You should now see the _Elements_ panel:
+
+
 
 
 ## 3. Creating and loading an external `.js` file
