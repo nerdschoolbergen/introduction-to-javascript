@@ -52,7 +52,7 @@ Apparently nothing happened so it's time to take on our CSI hat.
 intro.html:13 Uncaught TypeError: Cannot set property 'innerHTML' of null
 ```
 
-Looks like we're trying to set `innerHTML` on something that's `null`. Looking at our code, we think it must be the `paragraph`, but let's explore another debug tool while we're at it.
+Looks like we're trying to set `innerHTML` on something that's `null`. It's not to hard to take a guess based on our code what the `null` thing is, but let's explore another debug tool while we're at it.
 
 * Between the two existing lines, add the following:
 
@@ -70,7 +70,7 @@ Well we already knew that, but becoming comfortable with `console.log()` is cruc
 
 Ok so back to our problem of a null paragraph. Can you guess why this is happening?
 
-No really. Think about it!
+No really, think about it a few second.
 
 The DOM is read sequentially from top to bottom. As the code is now, our `<script></script>` block is executed before anything in the `<body>` is even read initially. So when we try to find a `<p>` element, none exists because the parser haven't found it yet.
 
@@ -86,4 +86,4 @@ The DOM is read sequentially from top to bottom. As the code is now, our `<scrip
 
 In the first line we query the DOM via the `document` object, passing in a _selector_ to find the first `<p>` element in the webpage. We then change the contents of the element by setting the `innerHTML` property.
 
-### [Go to the next task](../task-1/README.md)
+### [Go to the next task ==>](../warm-up/README.md)
