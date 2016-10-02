@@ -86,5 +86,4 @@ The DOM is read sequentially from top to bottom. As the code is now, our `<scrip
 
 In the first line we query the DOM via the `document` object, passing in a _selector_ to find the first `<p>` element in the webpage. We then change the contents of the element by setting the `innerHTML` property.
 
-## Optional task
-* Try to insert a `<button>` element inside the `<p>` element.
+### [Go to the next task](../task-1/README.md)
