@@ -37,14 +37,14 @@ myFunction();
   - An _array_ of your 3 favorite foods
   - An _array_ of _objects_ where each object represents your 3 favorite movies.
     - Each object should have a property with the movie's name.
-    - Each object should have property which is another, nested object. This nested object should have two properties, one for `director`, one for `star`, where the value is the name of the director and the name of the main star actor or actress. If you don't remember who this is, just use make up fake names to save time.
+    - Each object should have property `credits` which is another, nested object. This nested object should have two properties, one for `director`, one for `star`, where the value is the name of the director and the name of the main star actor or actress. If you don't remember who this is, just use make up fake names to save time.
     - Put the movies in the order of your most to least liked so that your most liked movie is at the first position in the array.
 
 Hints:
 - Creating an object can look like: `var hellworld = { hello: 'world'}`
 - Creating an array can look like: `var items = ['apples', 'bananas']`
 
-* Create a function named `printMyInfo` that takes one parameter which will be the data structure you just made.
+* Create a function named `presentMyself` that takes one parameter which will be the data structure you just made.
 * In this function, create a variable with the default value of an empty string
 * Make the necessary logic to make up the text `Hello, my name is {name}. I'm {age} years old and my favorite movies are {least-liked-move} which is directed by {director} and stars {star}, {medium-liked-movie} which is directed by {director} and stars {star}, and {most-liked-movie} which is directed by {director} and stars {star}.`
 
