@@ -1,4 +1,4 @@
-# Task 2 - TODO App 2.0
+# Bonus: TODO App part 2
 
 In this task we are going to expand the TODO app to make it more useful by enabling storage of tasks in the browser.
 
@@ -6,8 +6,8 @@ You will learn how to:
  1. Use IIFEs (..what?), strict mode, and create objects and arrays
  2. Store data in the browser
 
-* Open `task-2.html` in your browser and your code editor. Open `task-2.js` in your code editor as well.
-* Copy the script you made from the previous task (`task-2.js`) into `task-2.js`
+* Open `bonus2.html` in your browser and your code editor. Open `bonus2.js` in your code editor as well.
+* Copy the script you made from the previous task (`bonus2.js`) into `bonus2.js`
 
 ## 1. IIFEs, strict mode, objects and arrays
 

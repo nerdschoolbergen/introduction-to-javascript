@@ -9,11 +9,13 @@ JavaScript is the most used language today, and there is no escaping it. Learn t
 This lesson is oriented around teaching you how to use Javascript client-side in the browser. In order to get the most out of the lesson it helps if you have some past experience with web technologies such as HTML and HTTP.
 
 ## What you need
-- A computer with Google Chrome installed  ([https://www.google.com/chrome](https://www.google.com/chrome))
-- A code editor. Any will do, but it helps to use one that's JavaScript-aware ( [Atom](https://atom.io/) / [Sublime Text](http://www.sublimetext.com/) / [WebStorm](https://www.jetbrains.com/webstorm/) / [Vim](http://www.vim.org/) / [Emacs](https://www.gnu.org/software/emacs/) / [Whatever](https://xkcd.com/378/) )
+- A browser: [Chrome](https://www.google.com/chrome)
+- A code editor: [Atom](https://atom.io/)
 
 ## How to get started
-Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the the "Download ZIP" button to the right.
+
+* Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the the "Download ZIP" button to the right.
+* Although you have this readme file on your computer it's easier to read it on GitHub, so we recommend you keep this page open with the exercise tasks.
 
 ## Exercises
 This repository contains a set of exercises organized in folders. Each folder contains a `README.md` describing the exercise.
@@ -21,6 +23,11 @@ This repository contains a set of exercises organized in folders. Each folder co
 - [Exercise 1](exercise-1/)
 - [Exercise 2](exercise-2/)
 - [Exercise 3](exercise-3/)
+
+### Bonus exercises
+
+- [Bonus part 1](bonus-1/)
+- [Bonus part 2](bonus-2/)
 
 ## Helpful resources
 > **Note:** Avoid W3Schools.com. It's often outdated by todays web specifications. Use MDN instead.

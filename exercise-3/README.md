@@ -62,23 +62,23 @@ Tips:
 
 There are some client side storage mechanisms we can use quite easily.
 
-Local Storage persists data on disk between sessions (will be there if you restart browser)
+**Local Storage** persists data on disk between sessions (will be there if you restart browser)
 
-Session Storage stores data for a session (if you close the browser tab or browser it will be gone)
+**Session Storage** stores data for a session (if you close the browser tab or browser it will be gone)
 
 Let's use session storage to save our information.
 
 First, let's find this storage so we can see data being put into it.
 
-* In Chrome, open dev tools and go to the Application tab, then find Session Storage in the left side menu. As you can see, it's empty now.
+* In Chrome, open dev tools and go to the Application tab, then find Session Storage in the left side menu. As you can see, it's empty now. (The Key and Value columns should be empty).
 
-* Open a new browser tab and quickly read through https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+* Open a new browser tab and quickly read through https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage to get a basic idea of usage.
 
 As you can see it's fairly simple: `getItem(key)`, `setItem(key, value)`, and `removeItem(key)` is pretty much all you need to know.
 
-Both local and session storage is available on the global `window` object which represents the browser in our code.
+Both local and session storage is available on the global `window` object which represents the browser in our code. You can access this object anywhere.
 
-* Create a new function after `presentMyself` named `saveMyself` which takes one parameter.
+* Create a new function named `saveMyself` which takes one parameter.
 
 * In the new function, figure out how to use the `setItem(key, value)` function to store the object you pass in.
 
@@ -90,11 +90,11 @@ The Key column probably looks as expected but what's going on with the Value?
 
 `[object Object]`
 
-Weeeeird. Or is it?
+Weeeeird.
 
-Session Storage will store everything as strings, and the above is the string representation of an object.
+Session Storage will store everything as strings, and the above is the string representation of the object _type_. In other words, what you just stored is the string `"[object Object]"` and not the object at all. Clearly this is no good.
 
-JSON to the rescue!
+Let's use a better format to store our object in.
 
 JSON is a lovely data structure to work with in JavaScript, since it's more or less identical to how we write javscript objects and arrays. Thankfully there are built-in API's to convert to and from JSON
 
@@ -112,6 +112,10 @@ JSON is a lovely data structure to work with in JavaScript, since it's more or l
 
 * In the function, use the `getItem(key)` on session storage to get the stored object.
 
-* Make sure you parse the stored JSON string back to a JS object.
+* Make sure you _parse_ the stored JSON string back to a JS object.
 
 * Write the object to the Console and inspect it in the browser.
+
+**You're all done now, but feel free to continute with...**
+
+# [Go to bonus task =>](../bonus-1/README.md)
