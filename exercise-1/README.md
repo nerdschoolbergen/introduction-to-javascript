@@ -37,6 +37,10 @@ The result should be a box popping up saying 'Hello world!'. How exciting!
 
 All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipulate the webpage markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the webpage is represented as a node in the tree.
 
+This is what the DOM structure of `exercise1.html` looks like:
+
+![](../exercise-1_3-1.png)
+
 We are going to use a DOM API method called `querySelector` to replace some text in the webpage, but we need to think about the order we do things.
 
 * Replace the contents of the `<script>` element we created in the last example with the following code:
@@ -82,7 +86,7 @@ The DOM is read sequentially from top to bottom. As the code is now, our `<scrip
 
 * Refresh your page. The result should be the text 'Hello Nerdschool' displaying in the paragraph below the heading.
 
-  ![](../exercise-1_3.png)
+  ![](../exercise-1_3-2.png)
 
 * Try replacing the text with something else, then refreshing the page.
 
