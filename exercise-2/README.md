@@ -51,11 +51,11 @@ You will learn how to:
 ```html
 <img src="images/my-image.png" alt="My amazing image" />
 ```
-* The `alt` attribute ("Alternate text") is used to specify a descriptive text that should be displayed if the image cannot be loaded. It is also important for accessability (screen readers).
+* The `alt` attribute ("Alternate text") is used to specify a descriptive text that should be displayed if the image cannot be loaded. It is also important for accessibility (screen readers).
 * Refresh the page. The result should be something like this:
 ![](../exercise-2_3.png)
 
-
+> **Note:** Having trouble displaying the image? Double that the the path to the file in the `src` attribute is correct. Also verify that the syntax of the `<img/>` tag is correct. Still not working? Open the _Console_ panel in Chrome DevTools like in Exercise 1 to debug.
 ## 2. Chrome DevTools &ndash; The _Elements_ panel
 
 ## 3. Creating and loading an external `.js` file
