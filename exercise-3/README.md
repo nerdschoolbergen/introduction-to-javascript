@@ -2,20 +2,20 @@
 
 First, we must create the structure we need to write some javascript. We never write javascript directly in html files, we make `.js` files which we reference in html.
 
-* Create a new `scripts` folder inside of the `new-task-1` folder.
-* In the `scripts` folder, create a new file named `task1.js`.
-* In `task1.html`, add a script tag in the `<body>`. A script tag example: `<script src="path/to/.js/file"></script>`
+* Create a new `scripts` folder inside of the `exercise-3` folder.
+* In the `scripts` folder, create a new file named `exercise3.js`.
+* In `exercise3.html`, add a script tag in the `<body>`. A script tag example: `<script src="path/to/.js/file"></script>`
 
 Now, let's explore some of the basic language constructs.
 
-First we want to ensure that our code in `task1.js` is contained in this file and is not accessible elsewhere. This is mainly for our own sanity.
+First we want to ensure that our code in `exercise3.js` is contained in this file and is not accessible elsewhere. This is mainly for our own sanity.
 
-If we were to create a variable directly inside of the `task1.js` file, it would be global, accessible for all javascript code in our application. This can be helpful sometimes, but often leads to confusion and hard-to-find bugs.
+If we were to create a variable directly inside of the `exercise3.js` file, it would be global, accessible for all javascript code in our application. This can be helpful sometimes, but often leads to confusion and hard-to-find bugs.
 
 If we wrap all our code inside a function, we ensure all code we write is scoped to the function.
 
 ~~~~javascript
-// task1.js
+// exercise3.js
 
 (function() {
   // our code goes here...
