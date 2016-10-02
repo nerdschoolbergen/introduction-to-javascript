@@ -1,4 +1,4 @@
-# Task 1 - TODO app
+# Bonus: TODO App part 1
 
 Now it gets more exiting. We are going to create a very simple TODO app where users can add tasks and check tasks as completed.
 
@@ -8,7 +8,7 @@ You will learn how to:
 
 The webpage for this example set up using separate files for JavaScript and CSS, to separate styling and scripts from the markup. the `css` folder contains the styles, and `scripts` folder contains the JavaScript.
 
-Open `task-1.html` in your browser and your code editor.
+Open `bonus1.html` in your browser and your code editor.
 
 ## 1. Functions and events
 Functions in JavaScript are so called first-class, which means they are objects and can be manipulated and passed around just like any other object.
@@ -58,11 +58,11 @@ We told the browser to send `click` events from the "Add" button to the `buttonC
 ## 2. Adding tasks to the list in the TODO app
 
 * **Before starting, delete the code we added to `task-1.js` in the last exercise.**
-* Also review the `task-1.html` and `task-1.js` files to understand how it currently works and what is missing.
+* Also review the `bonus1.html` and `bonus1.js` files to understand how it currently works and what is missing.
 
 ### Handling input from the user
 
-* In `task-1.js`, do the following:
+* In `bonus1.js`, do the following:
 	* Find out how to query the DOM  for `ul` (list) elements and assign the result to a variable.
 	* Do the same for the text field element.
 	* Do the same for the `form` element as well.
@@ -92,3 +92,5 @@ This function needs to be called each time the `submit` event is calling the `su
 
 * Try out the new code. You should be able to add tasks to the list.
 * Try inspecting the markup using the browser dev tools while adding tasks to see what happens to the DOM.
+
+# [Go to part 2 =>](../bonus-2/README.md)

@@ -115,3 +115,7 @@ JSON is a lovely data structure to work with in JavaScript, since it's more or l
 * Make sure you _parse_ the stored JSON string back to a JS object.
 
 * Write the object to the Console and inspect it in the browser.
+
+**You're all done now, but feel free to continute with...**
+
+# [Go to bonus task =>](../bonus-1/README.md)
