@@ -13,7 +13,9 @@ This lesson is oriented around teaching you how to use Javascript client-side in
 - A code editor. Any will do, but it helps to use one that's JavaScript-aware ( [Atom](https://atom.io/) / [Sublime Text](http://www.sublimetext.com/) / [WebStorm](https://www.jetbrains.com/webstorm/) / [Vim](http://www.vim.org/) / [Emacs](https://www.gnu.org/software/emacs/) / [Whatever](https://xkcd.com/378/) )
 
 ## How to get started
-Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the the "Download ZIP" button to the right.
+
+* Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the the "Download ZIP" button to the right.
+* Although you have this readme file on your computer it's easier to read it on GitHub, so we recommend you keep this page open with the exercise tasks.
 
 ## Exercises
 This repository contains a set of exercises organized in folders. Each folder contains a `README.md` describing the exercise.
