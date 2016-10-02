@@ -46,4 +46,19 @@
   }
 
   presentMyself(eirik);
+
+  function saveMyself(myself) {
+    var json = JSON.stringify(myself);
+    window.sessionStorage.setItem('eirik', json);
+  }
+
+  saveMyself(eirik);
+
+  function getMyself() {
+    var json = window.sessionStorage.getItem('eirik');
+    var myself = JSON.parse(json);
+    console.log('Myself from session storage', myself);
+  }
+
+  getMyself();
 }());

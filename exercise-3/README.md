@@ -56,3 +56,62 @@ Tips:
 
 Tips:
 - `document.createElement()` will be useful here. https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+- `document.body.appendChild()` may also be useful. https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
+### Storing the info
+
+There are some client side storage mechanisms we can use quite easily.
+
+Local Storage persists data on disk between sessions (will be there if you restart browser)
+
+Session Storage stores data for a session (if you close the browser tab or browser it will be gone)
+
+Let's use session storage to save our information.
+
+First, let's find this storage so we can see data being put into it.
+
+* In Chrome, open dev tools and go to the Application tab, then find Session Storage in the left side menu. As you can see, it's empty now.
+
+* Open a new browser tab and quickly read through https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+
+As you can see it's fairly simple: `getItem(key)`, `setItem(key, value)`, and `removeItem(key)` is pretty much all you need to know.
+
+Both local and session storage is available on the global `window` object which represents the browser in our code.
+
+* Create a new function after `presentMyself` named `saveMyself` which takes one parameter.
+
+* In the new function, figure out how to use the `setItem(key, value)` function to store the object you pass in.
+
+* Call the new function with the object you created earlier.
+
+* Go back to Chrome and inspect the Session Storage view.
+
+The Key column probably looks as expected but what's going on with the Value?
+
+`[object Object]`
+
+Weeeeird. Or is it?
+
+Session Storage will store everything as strings, and the above is the string representation of an object.
+
+JSON to the rescue!
+
+JSON is a lovely data structure to work with in JavaScript, since it's more or less identical to how we write javscript objects and arrays. Thankfully there are built-in API's to convert to and from JSON
+
+`var json = JSON.stringify(obj)` will create a JSON string representation of an object
+
+`var obj = JSON.parse(json)` will creata a javascript object of a JSON string.
+
+* Inside the `saveMyself` function, _stringify_ the object we get as input parameter.
+
+* Save the JSON string as the value in session storage
+
+* Go back to Chrome and inspect Session Storage after refreshing the page. It should now be easy to read the JSON object in the Value column.
+
+* Create a new function named `getMyself` which takes no parameters.
+
+* In the function, use the `getItem(key)` on session storage to get the stored object.
+
+* Make sure you parse the stored JSON string back to a JS object.
+
+* Write the object to the Console and inspect it in the browser.
