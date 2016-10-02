@@ -65,9 +65,11 @@ We can use the Elements panel in Chrome DevTools to make changes to the DOM (and
   - Select **More Tools > Developer Tools** from the Chrome Menu.
   - Right-click on a page element and select Inspect
   - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
-* You should now see the _Elements_ panel:
-
-
+* You should now see the _Elements_ panel displaying the DOM tree of your page:
+![](../exercise-2_4.png)
+* Try moving the mouse pointer over some of the elements. The corresponding section of the web page will "light up" to tell you where the element currently selected is located in the layout of the page.
+* Try using the up and down arrow keys to navigate up and down the DOM tree
+* Try editing the heading by first selecting the `<h1>` tag in the DOM tree view and then double click on the text "This is my heading". Type something and press enter to stop editing and display the changes in the web page.
 
 
 ## 3. Creating and loading an external `.js` file
