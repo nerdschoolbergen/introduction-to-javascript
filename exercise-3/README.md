@@ -35,7 +35,24 @@ myFunction();
   - A property containing your name
   - A property containing your age
   - An _array_ of your 3 favorite foods
-  - An _array_ of _objects_ where each object represents your favorite movies.
-    - Each object should have a property with the movie's name
+  - An _array_ of _objects_ where each object represents your 3 favorite movies.
+    - Each object should have a property with the movie's name.
+    - Each object should have property which is another, nested object. This nested object should have two properties, one for `director`, one for `star`, where the value is the name of the director and the name of the main star actor or actress. If you don't remember who this is, just use make up fake names to save time.
+    - Put the movies in the order of your most to least liked so that your most liked movie is at the first position in the array.
 
-* Create a function
+Hints:
+- Creating an object can look like: `var hellworld = { hello: 'world'}`
+- Creating an array can look like: `var items = ['apples', 'bananas']`
+
+* Create a function named `printMyInfo` that takes one parameter which will be the data structure you just made.
+* In this function, create a variable with the default value of an empty string
+* Make the necessary logic to make up the text `Hello, my name is {name}. I'm {age} years old and my favorite movies are {least-liked-move} which is directed by {director} and stars {star}, {medium-liked-movie} which is directed by {director} and stars {star}, and {most-liked-movie} which is directed by {director} and stars {star}.`
+
+Tips:
+- As you will notice, the listing of the movies are in the opposite order of how they are entered into the list. If you spend a long time figuring out how to reverse the order, just list the movies out in the given order.
+
+* Create a new DOM element on the html page which will contain the string you made
+* Log the string to `console` and inspect the printed string in the browser's Console.
+
+Tips:
+- `document.createElement()` will be useful here. https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
