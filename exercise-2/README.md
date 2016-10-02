@@ -56,7 +56,11 @@ You will learn how to:
 ![](../exercise-2_3.png)
 
 > **Note:** Having trouble displaying the image? Double that the the path to the file in the `src` attribute is correct. Also verify that the syntax of the `<img/>` tag is correct. Still not working? Open the _Console_ panel in Chrome DevTools like in Exercise 1 to debug.
+
 ## 2. Chrome DevTools &ndash; The _Elements_ panel
+
+We can use the Elements panel in Chrome DevTools to make changes to the DOM (and CSS) on the fly in the browser
+
 
 ## 3. Creating and loading an external `.js` file
 
