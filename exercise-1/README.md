@@ -1,5 +1,5 @@
-# Intro - Hello world
-This task will get you started learning the basics of JavaScript in the browser.
+# Exercise 1 - Hello world
+This exercise will get you started learning the basics of JavaScript in the browser.
 
 You will learn how to:
  1. Set up your development environment
@@ -8,13 +8,15 @@ You will learn how to:
 
 ## 1. Dev environment
 
-![Intro-1](../intro-1.gif)
+> **Before you begin**: Please make sure that you have the following installed:
+-  Google Chrome: [https://www.google.com/chrome](https://www.google.com/chrome)
+-  A code editor
 
-* Open `intro.html` both in your browser and your code editor. Make sure changes to the HTML file are reflected in the browser.
+* Open `intro.html` both in Chrome and your code editor. Make sure changes to the HTML file are reflected in the browser.
 
 ## 2. "Hello world"
 
-To make our example webpage run JavaScript we need to add a `<script>` element.
+To make our example web page run JavaScript we need to add a `<script>` element.
 * Add the following `<script>` element just before the closing `</body>` element:
 
 ```html
@@ -27,7 +29,9 @@ To make our example webpage run JavaScript we need to add a `<script>` element.
 
 The result should be a box popping up saying 'Hello world!'. How exciting!
 
-![Intro-2](../intro-2.png)
+![](../exercise-1_2.png)
+
+> **Note:** Declaring scripts directly in HTML inside a `<script>`-tag is not good considered good practice, in later exercises we will be doing all coding inside external `.js` files loaded into the page.
 
 ## 3. Interacting with the DOM
 
@@ -78,7 +82,7 @@ The DOM is read sequentially from top to bottom. As the code is now, our `<scrip
 
 * Refresh your page. The result should be the text 'Hello Nerdschool' displaying in the paragraph below the heading.
 
-  ![Intro-3](../intro-3.png)
+  ![](../exercise-1_3.png)
 
 * Try replacing the text with something else, then refreshing the page.
 
@@ -86,4 +90,4 @@ The DOM is read sequentially from top to bottom. As the code is now, our `<scrip
 
 In the first line we query the DOM via the `document` object, passing in a _selector_ to find the first `<p>` element in the webpage. We then change the contents of the element by setting the `innerHTML` property.
 
-### [Go to the next task ==>](../warm-up/README.md)
+### [Go to exercise 2 ==>](../exercise-2/README.md)
