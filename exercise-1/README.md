@@ -4,7 +4,7 @@ This exercise will get you started learning the basics of JavaScript in the brow
 You will learn how to:
  1. Set up your development environment
  2. Create "Hello world"
- 3. Make your code interact with the webpage
+ 3. Make your code interact with the web page
 
 ## 1. Dev environment
 
@@ -35,13 +35,13 @@ The result should be a box popping up saying 'Hello world!'. How exciting!
 
 ## 3. Interacting with the DOM
 
-All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipulate the webpage markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the webpage is represented as a node in the tree.
+All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipulate the web page markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the web page is represented as a node in the tree.
 
 This is what the DOM structure of `exercise1.html` looks like:
 
 ![](../exercise-1_3-1.png)
 
-We are going to use a DOM API method called `querySelector` to replace some text in the webpage, but we need to think about the order we do things.
+We are going to use a DOM API method called `querySelector` to replace some text in the web page, but we need to think about the order we do things.
 
 * Replace the contents of the `<script>` element we created in the last example with the following code:
 
@@ -50,11 +50,16 @@ var paragraph = document.querySelector('p');
 paragraph.innerHTML = 'Hello Nerdschool';
 ```
 
-* Refresh the page in the browser.
+* Refresh the page (hit `F5` or `CTRL+R`/ `CMD+R`).
 
 Apparently nothing happened so it's time to take on our CSI hat.
 
-* Open the browser developer tools (F12) and go to the Console tab. Refresh the page again.
+* Open the Chrome Dev Tools by doing one of the following:
+  - Select **More Tools > Developer Tools** from the Chrome Menu.
+  - Right-click on a page element and select Inspect
+  - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
+*  Go to the Console panel. (Don't worry about all the other buttons and panels, we will revisit DevTools in the next exercise.)
+* Refresh the page again.
 
 ```javascript
 intro.html:13 Uncaught TypeError: Cannot set property 'innerHTML' of null
@@ -68,7 +73,7 @@ Looks like we're trying to set `innerHTML` on something that's `null`. It's not 
 console.log('The current paragraph is:', paragraph);
 ~~~~
 
-* Refresh the page with the dev tools still open.
+* Refresh the page with the Console panel in DevTools still open.
 
 ~~~~
 The current paragraph is: null
@@ -92,6 +97,6 @@ The DOM is read sequentially from top to bottom. As the code is now, our `<scrip
 
 ### What happened here?
 
-In the first line we query the DOM via the `document` object, passing in a _selector_ to find the first `<p>` element in the webpage. We then change the contents of the element by setting the `innerHTML` property.
+In the first line we query the DOM via the `document` object, passing in a _selector_ to find the first `<p>` element in the web page. We then change the contents of the element by setting the `innerHTML` property.
 
 ### [Go to exercise 2 ==>](../exercise-2/README.md)
