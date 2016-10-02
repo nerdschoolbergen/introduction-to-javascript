@@ -33,7 +33,7 @@ The result should be a box popping up saying 'Hello world!'. How exciting!
 
 All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipulate the webpage markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the webpage is represented as a node in the tree.
 
-We are going to use a DOM API method called `querySelector` to replace some text in the webpage.
+We are going to use a DOM API method called `querySelector` to replace some text in the webpage, but we need to think about the order we do things.
 
 * Replace the contents of the `<script>` element we created in the last example with the following code:
 
@@ -42,7 +42,39 @@ var paragraph = document.querySelector('p');
 paragraph.innerHTML = 'Hello Nerdschool';
 ```
 
-Make sure your `<script>` element is located below the `<p>` (paragraph) element.
+* Refresh the page in the browser.
+
+Apparently nothing happened so it's time to take on our CSI hat.
+
+* Open the browser developer tools (F12) and go to the Console tab. Refresh the page again.
+
+```javascript
+intro.html:13 Uncaught TypeError: Cannot set property 'innerHTML' of null
+```
+
+Looks like we're trying to set `innerHTML` on something that's `null`. Looking at our code, we think it must be the `paragraph`, but let's explore another debug tool while we're at it.
+
+* Between the two existing lines, add the following:
+
+~~~~javascript
+console.log('The current paragraph is:', paragraph);
+~~~~
+
+* Refresh the page with the dev tools still open.
+
+~~~~
+The current paragraph is: null
+~~~~
+
+Well we already knew that, but becoming comfortable with `console.log()` is crucial. This is one of your primary tools of inspecting what's going on at runtime.
+
+Ok so back to our problem of a null paragraph. Can you guess why this is happening?
+
+No really. Think about it!
+
+The DOM is read sequentially from top to bottom. As the code is now, our `<script></script>` block is executed before anything in the `<body>` is even read initially. So when we try to find a `<p>` element, none exists because the parser haven't found it yet.
+
+* Make sure your `<script>` element is located below the `<p>` (paragraph) element. (Hint: the `<script>` block can live inside of the `<body>`).
 
 * Refresh your page. The result should be the text 'Hello Nerdschool' displaying in the paragraph below the heading.
 
