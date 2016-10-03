@@ -12,7 +12,7 @@ You will learn how to:
 ## 1. Writing some basic HTML
 
 ### What is HTML?
- > HTML is a **markup language**. HTML separates "content" (words, images, audio, video, and so on) from "presentation" (instructions for displaying each type of content). HTML uses a pre-defined set of elements to define content types. Elements contain one or more "tags" that contain or express content. Tags are enclosed by angle brackets, and the closing tag begins with a forward slash. (developer.mozilla.org)
+ > HTML is a **markup language**. HTML separates "content" (words, images, audio, video, and so on) from "presentation" (instructions for displaying each type of content). HTML uses a pre-defined set of elements to define content types. Elements contain one or more "elements" that contain or express content. elements are enclosed by angle brackets, and the closing element begins with a forward slash. (developer.mozilla.org)
 
  Basic HTML structure:
 
@@ -28,11 +28,18 @@ You will learn how to:
  </html>
  ```
 
+* The `<!DOCTYPE html>` tag at the top tells the browser that we are using version 5 of the HTML standard.
+* The `<html>` element surrounds all elements in the page.
+* The `<head>` elements contains element that define meta data about the contents of the page, for instance the `<title>`.
+* The `<body>` element surrounds the page content.
+
+> Read more about HTML here: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction
+
 ### Adding a heading and a paragraph
 * Open `exercise2.html` in Chrome and in your code editor.
-* Locate the empty `<body>`-tag. This is where we will be adding some markup.
-* To create a main heading for the page, add a `<h1>`-tag with the text "This is my heading" inside the `<body>` tag.
-* Next we will add a paragraph of text under the heading. Add a `<p>`-tag with the text "This is my paragraph" underneath the previous `<h1>`-tag.
+* Locate the empty `<body>`-element. This is where we will be adding some markup.
+* To create a main heading for the page, add a `<h1>`-element with the text "This is my heading" inside the `<body>` element.
+* Next we will add a paragraph of text under the heading. Add a `<p>`-element with the text "This is my paragraph" underneath the previous `<h1>`-element.
 * Refresh the page in the browser. The result should look something like this:
 
   ![](../exercise-2_1.png)
@@ -43,7 +50,7 @@ You will learn how to:
 * Create a sub folder called `images` inside the folder containing `exercise2.html`
 * Move your image file into the `images` folder. The resulting folder structure should look like this:
   ![](../exercise-2_2.png)
-* To display the image in the web page, we need to add an `<img/>` tag. The img tag does not have a closing tag. **Note the `/` at the end of the tag**:
+* To display the image in the web page, we need to add an `<img/>` element. The img element does not have a closing element. **Note the `/` at the end of the element**:
 
   ```html
   <img src="" alt="My amazing image" />
@@ -59,7 +66,7 @@ You will learn how to:
 * Refresh the page. The result should be something like this:
 ![](../exercise-2_3.png)
 
-> **Note:** Having trouble displaying the image? Double check that the the path to the file in the `src` attribute is correct. Also verify that the syntax of the `<img/>` tag is correct. Still not working? Open the _Console_ panel in Chrome DevTools like in Exercise 1 to debug.
+> **Note:** Having trouble displaying the image? Double check that the the path to the file in the `src` attribute is correct. Also verify that the syntax of the `<img/>` element is correct. Still not working? Open the _Console_ panel in Chrome DevTools like in Exercise 1 to debug.
 
 ## 2. Chrome DevTools &ndash; The _Elements_ panel
 
@@ -73,12 +80,12 @@ We can use the Elements panel in Chrome DevTools to make changes to the DOM (and
 ![](../exercise-2_4.png)
 * Try moving the mouse pointer over some of the elements. The corresponding section of the web page will "light up" to tell you where the element currently selected is located in the layout of the page.
 * Try using the up and down arrow keys to navigate up and down the DOM tree
-* Try editing the heading by first selecting the `<h1>` tag in the DOM tree view and then double click on the text "This is my heading". Type something and press enter to stop editing and display the changes in the web page.
+* Try editing the heading by first selecting the `<h1>` element in the DOM tree view and then double click on the text "This is my heading". Type something and press enter to stop editing and display the changes in the web page.
 
 
 ## 3. Creating and loading an external `.js` file
 
-In Exercise 1 we created some simple JavaScript inside a `<script>` tag in the web page. Now we´ll look at creating a separate `.js` file for our JavaScript code. This makes the code reusable, as we can link to the same script from multiple pages and share the script with others.
+In Exercise 1 we created some simple JavaScript inside a `<script>` element in the web page. Now we´ll look at creating a separate `.js` file for our JavaScript code. This makes the code reusable, as we can link to the same script from multiple pages and share the script with others.
 
 * Start by creating a `scripts` folder inside the folder where `exercise2.html` is located.
 * Create a file called `exercise2.js` inside the `scripts` folder you just created.
@@ -88,7 +95,7 @@ In Exercise 1 we created some simple JavaScript inside a `<script>` tag in the w
   alert('Hello from an external JavaScript file!')
   ```
 
-* To make your web page load this script, we need to add a `<script>` tag with an `src` attribute (like we did with the image):
+* To make your web page load this script, we need to add a `<script>` element with an `src` attribute (like we did with the image):
 
   ```html
   <script src=""></script>
@@ -97,6 +104,6 @@ In Exercise 1 we created some simple JavaScript inside a `<script>` tag in the w
 * Can you guess what the value of the `src` attribute needs to be in order to load your script? Hint: Take a look at the image source path.
 * Refresh the web page and you should now see an alert box with the text "Hello from an external JavaScript file!".
 
-> More info about the `<script>` tag here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+> More info about the `<script>` element here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
 
 ## 4. Chrome DevTools &ndash; The _Network_ panel
