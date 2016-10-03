@@ -115,15 +115,22 @@ In Exercise 1 we created some simple JavaScript inside a `<script>` element in t
 
 ## 4. Chrome DevTools &ndash; The _Network_ panel
 
-Lastly we will take a look at the _Network_ panel in Chrome DevTools. The Network panel lets you look at a timeline of what resources are loaded when you load the web page, such as:
-- The page itself ("document")
-- Scripts
-- Images and videos
-- Web fonts
-- Background HTTP requests
+Lastly we will take a look at the _Network_ panel in Chrome DevTools. The Network panel lets you look at a timeline of what resources are loaded when you load the web page, such as the page itself, scripts, images, videos and
+background HTTP requests.
 
+* Open the following URL in Chrome: http://output.jsbin.com/redoqo
 * Open the Chrome Dev Tools by doing one of the following:
   - Select **More Tools > Developer Tools** from the Chrome Menu.
   - Right-click on a page element and select Inspect
   - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
 * Select the _Network_ panel. Notice that the panel is empty. This is because we need to have the panel open when the page loads in order to record network activity. Press `CTRL+R` (Windows) or `CMD+R` (Mac) to refresh the page and record.
+* You should now see a list containing multiple requests. A short description of some of the columns in the list:
+  - Method_: The HTTP Verb (GET, POST, PUT, etc.) was used in the request
+  - Status: The current status of the request (200, 404, 500, etc.)
+  - Type: The type of the requested resource (png, script, document, stylesheet)
+  - Size: The size of the response
+  - Time: The total duration of the request
+* The page contains a request to a image called `fire.gif`. See if you can locate the request in the list:
+  * How big is the image?
+  * How long did it take to download and display the image?
+  * What is the status of the request?
