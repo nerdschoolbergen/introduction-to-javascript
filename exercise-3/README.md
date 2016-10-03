@@ -1,4 +1,4 @@
-# Task 1: The basics of JavaScript
+# Exercise 3: The basics of JavaScript
 
 First, we must create the structure we need to write some javascript. We never write javascript directly in html files, we make `.js` files which we reference in html.
 
