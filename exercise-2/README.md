@@ -88,7 +88,7 @@ We can use the Elements panel in Chrome DevTools to make changes to the DOM (and
 * Try using the up and down arrow keys to navigate up and down the DOM tree
 * Try editing the heading by first selecting the `<h1>` element in the DOM tree view and then double click on the text "This is my heading". Type something and press enter to stop editing and display the changes in the web page.
 
-> Read more about the _Elements_ panel In DevTools here: https://developers.google.com/web/tools/chrome-devtools/inspect-styles/
+> Read more about the _Elements_ panel in DevTools here: https://developers.google.com/web/tools/chrome-devtools/inspect-styles/
 
 ## 3. Creating and loading an external `.js` file
 
@@ -125,7 +125,7 @@ background HTTP requests.
   - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
 * Select the _Network_ panel. Notice that the panel is empty. This is because we need to have the panel open when the page loads in order to record network activity. Press `CTRL+R` (Windows) or `CMD+R` (Mac) to refresh the page and record.
 * You should now see a list containing multiple requests. A short description of some of the columns in the list:
-  - Method_: The HTTP Verb (GET, POST, PUT, etc.) was used in the request
+  - Method: The HTTP Verb (GET, POST, PUT, etc.) was used in the request
   - Status: The current status of the request (200, 404, 500, etc.)
   - Type: The type of the requested resource (png, script, document, stylesheet)
   - Size: The size of the response
@@ -134,3 +134,11 @@ background HTTP requests.
   * How big is the image?
   * How long did it take to download and display the image?
   * What is the status of the request?
+* Open the following page: http://jsbin.com/rezuhiv
+* Follow the steps above to record network activity
+* Can you spot what`s wrong by looking at the list of requests? (Hint: Errors are light-red).
+  * What is the status code of the failed request?
+
+> Read more about the _Network_ panel in DevTools here: https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading
+
+### [Go to exercise 3 ==>](../exercise-3/README.md)
