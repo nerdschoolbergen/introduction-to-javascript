@@ -55,7 +55,7 @@ You will learn how to:
 * Refresh the page. The result should be something like this:
 ![](../exercise-2_3.png)
 
-> **Note:** Having trouble displaying the image? Double that the the path to the file in the `src` attribute is correct. Also verify that the syntax of the `<img/>` tag is correct. Still not working? Open the _Console_ panel in Chrome DevTools like in Exercise 1 to debug.
+> **Note:** Having trouble displaying the image? Double check that the the path to the file in the `src` attribute is correct. Also verify that the syntax of the `<img/>` tag is correct. Still not working? Open the _Console_ panel in Chrome DevTools like in Exercise 1 to debug.
 
 ## 2. Chrome DevTools &ndash; The _Elements_ panel
 
@@ -73,5 +73,22 @@ We can use the Elements panel in Chrome DevTools to make changes to the DOM (and
 
 
 ## 3. Creating and loading an external `.js` file
+
+In Exercise 1 we created some simple JavaScript inside a `<script>` tag in the web page. Now we´ll look at creating a separate `.js` file for our JavaScript code. This makes the code reusable, as we can link to the same script from multiple pages and share the script with others.
+
+* Start by creating a `scripts` folder inside the folder where `exercise2.html` is located.
+* Create a file called `exercise2.js` inside the `scripts` folder you just created.
+* Add the following code to the `exercise2.js` file
+```javascript
+  alert('Hello from an external JavaScript file!')
+```
+* To make your web page load this script, we need to add a `<script>` tag with an `src` attribute (like we did with the image):
+  ```html
+    <script src=""></script>
+  ```
+* Can you guess what the value of the `src` attribute needs to be in order to load your script? Hint: Take a look at the image source path.
+* Refresh the web page and you should now see an alert box with the text "Hello from an external JavaScript file!".
+
+> More info about the `<script>` tag here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
 
 ## 4. Chrome DevTools &ndash; The _Network_ panel
