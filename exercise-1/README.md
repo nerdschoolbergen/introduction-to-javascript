@@ -10,9 +10,9 @@ You will learn how to:
 
 > **Before you begin**: Please make sure that you have the following installed:
 -  Google Chrome: [https://www.google.com/chrome](https://www.google.com/chrome)
--  A code editor
+-  Atom: https://atom.io/
 
-* Open `intro.html` both in Chrome and your code editor. Make sure changes to the HTML file are reflected in the browser.
+* Open `intro.html` both in Chrome and Atom. Make sure changes to the HTML file are reflected in the browser.
 
 ## 2. "Hello world"
 

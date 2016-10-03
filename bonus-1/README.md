@@ -8,7 +8,7 @@ You will learn how to:
 
 The webpage for this example set up using separate files for JavaScript and CSS, to separate styling and scripts from the markup. the `css` folder contains the styles, and `scripts` folder contains the JavaScript.
 
-Open `bonus1.html` in your browser and your code editor.
+Open `bonus1.html` in Chrome and Atom.
 
 ## 1. Functions and events
 Functions in JavaScript are so called first-class, which means they are objects and can be manipulated and passed around just like any other object.

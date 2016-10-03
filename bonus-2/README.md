@@ -6,7 +6,7 @@ You will learn how to:
  1. Use IIFEs (..what?), strict mode, and create objects and arrays
  2. Store data in the browser
 
-* Open `bonus2.html` in your browser and your code editor. Open `bonus2.js` in your code editor as well.
+* Open `bonus2.html` in Chrome and Atom. Open `bonus2.js` in Atom as well.
 * Copy the script you made from the previous task (`bonus2.js`) into `bonus2.js`
 
 ## 1. IIFEs, strict mode, objects and arrays
