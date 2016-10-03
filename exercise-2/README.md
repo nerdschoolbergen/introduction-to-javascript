@@ -33,7 +33,7 @@ You will learn how to:
 * The `<head>` elements contains element that define meta data about the contents of the page, for instance the `<title>`.
 * The `<body>` element surrounds the page content.
 
-> Read more about HTML here: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction
+> ![MDN](../mdn.png) Read more about HTML here: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction
 
 ### Adding a heading and a paragraph
 * Open `exercise2.html` in Chrome and in your code editor.
@@ -43,6 +43,10 @@ You will learn how to:
 * Refresh the page in the browser. The result should look something like this:
 
   ![](../exercise-2_1.png)
+
+> ![MDN](../mdn.png) Read more about the heading and paragraph elements here:
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
 
 ### Adding an image
 
@@ -68,6 +72,8 @@ You will learn how to:
 
 > **Note:** Having trouble displaying the image? Double check that the the path to the file in the `src` attribute is correct. Also verify that the syntax of the `<img/>` element is correct. Still not working? Open the _Console_ panel in Chrome DevTools like in Exercise 1 to debug.
 
+> ![MDN](../mdn.png) Read more about the image element here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+
 ## 2. Chrome DevTools &ndash; The _Elements_ panel
 
 We can use the Elements panel in Chrome DevTools to make changes to the DOM (and CSS) on the fly in the browser.
@@ -82,6 +88,7 @@ We can use the Elements panel in Chrome DevTools to make changes to the DOM (and
 * Try using the up and down arrow keys to navigate up and down the DOM tree
 * Try editing the heading by first selecting the `<h1>` element in the DOM tree view and then double click on the text "This is my heading". Type something and press enter to stop editing and display the changes in the web page.
 
+> Read more about the _Element_ panel In DevTools here: https://developers.google.com/web/tools/chrome-devtools/inspect-styles/
 
 ## 3. Creating and loading an external `.js` file
 
@@ -104,6 +111,6 @@ In Exercise 1 we created some simple JavaScript inside a `<script>` element in t
 * Can you guess what the value of the `src` attribute needs to be in order to load your script? Hint: Take a look at the image source path.
 * Refresh the web page and you should now see an alert box with the text "Hello from an external JavaScript file!".
 
-> More info about the `<script>` element here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+> ![MDN](../mdn.png) More info about the `<script>` element here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
 
 ## 4. Chrome DevTools &ndash; The _Network_ panel
