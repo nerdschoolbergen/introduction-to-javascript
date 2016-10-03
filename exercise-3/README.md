@@ -5,14 +5,17 @@ First, we must create the structure we need to write some javascript. We never w
 * Create a new `scripts` folder inside of the `exercise-3` folder.
 * In the `scripts` folder, create a new file named `exercise3.js`.
 * In `exercise3.html`, add a script tag in the `<body>`. A script tag example: `<script src="path/to/.js/file"></script>`
+* Add a simple message box in the `.js` file to verify it is loaded correctly:  `alert('hi there')`
 
 Now, let's explore some of the basic language constructs.
 
 First we want to ensure that our code in `exercise3.js` is contained in this file and is not accessible elsewhere. This is mainly for our own sanity.
 
-If we were to create a variable directly inside of the `exercise3.js` file, it would be global, accessible for all javascript code in our application. This can be helpful sometimes, but often leads to confusion and hard-to-find bugs.
+If we were to create a variable directly inside of the `exercise3.js` file, it would be global, accessible for all javascript code in our application. This can be helpful sometimes, but often leads to confusion and hard-to-find bugs. Global state is considered an anti-pattern, so we take some extra measures to avoid us making a mistake by accident.
 
 If we wrap all our code inside a function, we ensure all code we write is scoped to the function.
+
+> Functions are the main construct for _encapsulation_ in JavaScript. In Java or C# we would use a _class_ to achieve encapsulation. JavaScript is all about _functions_.
 
 ~~~~javascript
 // exercise3.js
@@ -31,6 +34,8 @@ function myFunction() {
 myFunction();
 ~~~~
 
+> We just called this a self-executing function, but it's really known as an Immediately Invoked Function Expression or IIFE, pronounced "iffy". All you need to remember is that it's a function which invokes itself.
+
 * Inside the self-executing function, create a data structure that represents yourself. Make a variable that contains the following:
   - A property containing your name
   - A property containing your age
@@ -38,33 +43,36 @@ myFunction();
   - An _array_ of _objects_ where each object represents your 3 favorite movies.
     - Each object should have a property with the movie's name.
     - Each object should have property `credits` which is another, nested object. This nested object should have two properties, one for `director`, one for `star`, where the value is the name of the director and the name of the main star actor or actress. If you don't remember who this is, just use make up fake names to save time.
-    - Put the movies in the order of your most to least liked so that your most liked movie is at the first position in the array.
+    - Put the movies in the order of your most to least liked so that your most liked movie is at the _first_ position in the array and the least liked movie is _last_.
 
-Hints:
-- Creating an object can look like: `var hellworld = { hello: 'world'}`
-- Creating an array can look like: `var items = ['apples', 'bananas']`
+> Hints:
+> - Creating an object can look like: `var hellworld = { hello: 'world'}` where `hello` is the property name and `world` is the property's value.
+> - Creating an array can look like: `var fruits = ['apples', 'bananas']`.
 
 * Create a function named `presentMyself` that takes one parameter which will be the data structure you just made.
 * In this function, create a variable with the default value of an empty string
-* Make the necessary logic to make up the text `Hello, my name is {name}. I'm {age} years old and my favorite movies are {least-liked-move} which is directed by {director} and stars {star}, {medium-liked-movie} which is directed by {director} and stars {star}, and {most-liked-movie} which is directed by {director} and stars {star}.`
+* Make the necessary logic to make up the text `Hello, my name is {name}. I'm {age} years old and my favorite movies are {LEAST-liked-move} which is directed by {director} and stars {star}, {medium-liked-movie} which is directed by {director} and stars {star}, and {MOST-liked-movie} which is directed by {director} and stars {star}.`
 
-Tips:
-- As you will notice, the listing of the movies are in the opposite order of how they are entered into the list. If you spend a long time figuring out how to reverse the order, just list the movies out in the given order.
+> Tip:
+> - As you will notice, the listing of the movies are in the _opposite_ order of how they are entered into the list.
 
-* Create a new DOM element on the html page which will contain the string you made
+* Using only JavaScript, create a new DOM element to hold the text you just made, and insert it into the html page. We typically use `<p>` elements for text.
+
+> Tips:
+
+> - `document.createElement()` will be useful here. https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+
+> - `document.body.appendChild()` may also be useful. https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
 * Log the string to `console` and inspect the printed string in the browser's Console.
-
-Tips:
-- `document.createElement()` will be useful here. https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-- `document.body.appendChild()` may also be useful. https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
 
 ### Storing the info
 
 There are some client side storage mechanisms we can use quite easily.
 
-**Local Storage** persists data on disk between sessions (will be there if you restart browser)
+**Local Storage** persists data on disk between sessions (will be there if you restart browser).
 
-**Session Storage** stores data for a session (if you close the browser tab or browser it will be gone)
+**Session Storage** stores data for a session (if you close the browser tab or browser it will be gone).
 
 Let's use session storage to save our information.
 
@@ -72,11 +80,9 @@ First, let's find this storage so we can see data being put into it.
 
 * In Chrome, open dev tools and go to the Application tab, then find Session Storage in the left side menu. As you can see, it's empty now. (The Key and Value columns should be empty).
 
-* Open a new browser tab and quickly read through https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage to get a basic idea of usage.
+* Open a new browser tab and quickly read through https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage to get a basic idea of usage. There are 3 main functions you should pay attention to.
 
-As you can see it's fairly simple: `getItem(key)`, `setItem(key, value)`, and `removeItem(key)` is pretty much all you need to know.
-
-Both local and session storage is available on the global `window` object which represents the browser in our code. You can access this object anywhere.
+Both local and session storage is available on the global `window` object which represents the browser in our code. For example, `window.location` has the current url the browser tab is currently at. You can access this object anywhere.
 
 * Create a new function named `saveMyself` which takes one parameter.
 
@@ -118,4 +124,4 @@ JSON is a lovely data structure to work with in JavaScript, since it's more or l
 
 **You're all done now, but feel free to continute with...**
 
-# [Go to bonus task =>](../bonus-1/README.md)
+# [Go to exercise 4 =>](../exercise-4/README.md)
