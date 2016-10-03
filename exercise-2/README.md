@@ -44,13 +44,17 @@ You will learn how to:
 * Move your image file into the `images` folder. The resulting folder structure should look like this:
   ![](../exercise-2_2.png)
 * To display the image in the web page, we need to add an `<img/>` tag. The img tag does not have a closing tag. **Note the `/` at the end of the tag**:
-```html
-<img src="" alt="My amazing image" />
-```
+
+  ```html
+  <img src="" alt="My amazing image" />
+  ```
+
 * If you refresh the browser, no image will be displayed yet. We need to set the `src` attribute to the relative path of the image in the `images` folder on your computer:
-```html
-<img src="images/my-image.png" alt="My amazing image" />
-```
+
+  ```html
+  <img src="images/my-image.png" alt="My amazing image" />
+  ```
+
 * The `alt` attribute ("Alternate text") is used to specify a descriptive text that should be displayed if the image cannot be loaded. It is also important for accessibility (screen readers).
 * Refresh the page. The result should be something like this:
 ![](../exercise-2_3.png)
