@@ -81,13 +81,13 @@ In Exercise 1 we created some simple JavaScript inside a `<script>` tag in the w
 * Add the following code to the `exercise2.js` file
 
   ```javascript
-    alert('Hello from an external JavaScript file!')
+  alert('Hello from an external JavaScript file!')
   ```
 
 * To make your web page load this script, we need to add a `<script>` tag with an `src` attribute (like we did with the image):
 
   ```html
-    <script src=""></script>
+  <script src=""></script>
   ```
 
 * Can you guess what the value of the `src` attribute needs to be in order to load your script? Hint: Take a look at the image source path.
