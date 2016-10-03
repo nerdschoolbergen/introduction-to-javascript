@@ -125,7 +125,7 @@ background HTTP requests.
   - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
 * Select the _Network_ panel. Notice that the panel is empty. This is because we need to have the panel open when the page loads in order to record network activity. Press `CTRL+R` (Windows) or `CMD+R` (Mac) to refresh the page and record.
 * You should now see a list containing multiple requests. A short description of some of the columns in the list:
-  - Method: The HTTP Verb (GET, POST, PUT, etc.) was used in the request
+  - Method: The HTTP Verb (GET, POST, PUT, etc.) used in the request
   - Status: The current status of the request (200, 404, 500, etc.)
   - Type: The type of the requested resource (png, script, document, stylesheet)
   - Size: The size of the response
