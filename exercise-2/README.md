@@ -79,9 +79,9 @@ In Exercise 1 we created some simple JavaScript inside a `<script>` tag in the w
 * Start by creating a `scripts` folder inside the folder where `exercise2.html` is located.
 * Create a file called `exercise2.js` inside the `scripts` folder you just created.
 * Add the following code to the `exercise2.js` file
-```javascript
-  alert('Hello from an external JavaScript file!')
-```
+  ```javascript
+    alert('Hello from an external JavaScript file!')
+  ```
 * To make your web page load this script, we need to add a `<script>` tag with an `src` attribute (like we did with the image):
 
   ```html
