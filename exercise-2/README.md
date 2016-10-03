@@ -88,7 +88,7 @@ We can use the Elements panel in Chrome DevTools to make changes to the DOM (and
 * Try using the up and down arrow keys to navigate up and down the DOM tree
 * Try editing the heading by first selecting the `<h1>` element in the DOM tree view and then double click on the text "This is my heading". Type something and press enter to stop editing and display the changes in the web page.
 
-> Read more about the _Element_ panel In DevTools here: https://developers.google.com/web/tools/chrome-devtools/inspect-styles/
+> Read more about the _Elements_ panel In DevTools here: https://developers.google.com/web/tools/chrome-devtools/inspect-styles/
 
 ## 3. Creating and loading an external `.js` file
 
@@ -114,3 +114,16 @@ In Exercise 1 we created some simple JavaScript inside a `<script>` element in t
 > ![MDN](../mdn.png) More info about the `<script>` element here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
 
 ## 4. Chrome DevTools &ndash; The _Network_ panel
+
+Lastly we will take a look at the _Network_ panel in Chrome DevTools. The Network panel lets you look at a timeline of what resources are loaded when you load the web page, such as:
+- The page itself ("document")
+- Scripts
+- Images and videos
+- Web fonts
+- Background HTTP requests
+
+* Open the Chrome Dev Tools by doing one of the following:
+  - Select **More Tools > Developer Tools** from the Chrome Menu.
+  - Right-click on a page element and select Inspect
+  - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
+* Select the _Network_ panel. Notice that the panel is empty. This is because we need to have the panel open when the page loads in order to record network activity. Press `CTRL+R` (Windows) or `CMD+R` (Mac) to refresh the page and record.
