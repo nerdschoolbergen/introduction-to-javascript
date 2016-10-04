@@ -1,0 +1,38 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  width: 300px;
+  margin: 0 auto;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+input[type='checkbox'] {
+  margin-right: 5px;
+}
+input[type='checkbox']:checked + label {
+  transition: color 0.2s;
+}
+
+input[type='checkbox']:checked + label {
+  text-decoration: line-through;
+  color: gray;
+}
+
+input[type='text'] {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+input[type='submit'] {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid black;
+  font-weight: bold;
+}
