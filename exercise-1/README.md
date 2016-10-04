@@ -12,7 +12,7 @@ You will learn how to:
 -  Google Chrome: [https://www.google.com/chrome](https://www.google.com/chrome)
 -  Atom: https://atom.io/
 
-* Open `intro.html` both in Chrome and Atom. Make sure changes to the HTML file are reflected in the browser.
+* Open `exercise.html` both in Chrome and Atom. Make sure changes to the HTML file are reflected in the browser.
 
 ## 2. "Hello world"
 
@@ -62,7 +62,7 @@ Apparently nothing happened so it's time to take on our CSI hat.
 * Refresh the page again.
 
 ```javascript
-intro.html:13 Uncaught TypeError: Cannot set property 'innerHTML' of null
+exercise.html:13 Uncaught TypeError: Cannot set property 'innerHTML' of null
 ```
 
 Looks like we're trying to set `innerHTML` on something that's `null`. It's not to hard to take a guess based on our code what the `null` thing is, but let's explore another debug tool while we're at it.
