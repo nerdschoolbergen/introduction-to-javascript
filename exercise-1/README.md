@@ -17,7 +17,7 @@ You will learn how to:
 ## 2. "Hello world"
 
 To make our example web page run JavaScript we need to add a `<script>` element.
-* Add the following `<script>` element just before the closing `</body>` element:
+* Add the following `<script>` element just before the closing `</head>` element:
 
 ```html
 <script>
