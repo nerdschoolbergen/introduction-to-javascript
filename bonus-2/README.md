@@ -110,7 +110,7 @@ var value = localStorage.getItem('key');
 ```
 
 * Try this out in your browser console.
-* Tip: The 'Resources' tab in Chrome Use Dev tools lets you inspect the `localStorage` object
+* Tip: The 'Application' tab in Chrome Use Dev tools lets you inspect the `localStorage` object
 
 Values are limited to strings only. This leads us to a common problem in JavaScript applications. How to serialize and deserialize objects and arrays for storage and transfer to and from servers. The answer is `JSON` (JavaScript Object Notation). Try typing in the following in your browser console:
 ```javascript
