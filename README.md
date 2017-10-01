@@ -1,7 +1,7 @@
 ![JavaScript](https://www.unixstickers.com/image/cache/data/stickers/js/js.sh-180x180.png)
 
 # Introduction to JavaScript
-JavaScript is the most used language today, and there is no escaping it. Learn the basics in this lesson.
+JavaScript is the most used language today, and there is no escaping it. In this lession, you will learn the basics of the language. The lesson will also include a brief introduction to how the web works.
 
 ## [Open presentation slides](https://docs.google.com/presentation/d/1pw1vndugBl9NElaYg2_t0itNoGZwmiBW8cxwZkkjLP4/edit?usp=sharing)
 
@@ -10,7 +10,7 @@ This lesson is oriented around teaching you how to use Javascript client-side in
 
 ## What you need
 - A browser: [Chrome](https://www.google.com/chrome)
-- A code editor: [Atom](https://atom.io/)
+- A code editor: [Atom](https://atom.io/), [VS Code](https://code.visualstudio.com/)
 
 ## How to get started
 
@@ -29,6 +29,35 @@ This repository contains a set of exercises organized in folders. Each folder co
 
 - [Bonus part 1](bonus-1/)
 - [Bonus part 2](bonus-2/)
+
+
+### Symbols and notation used in exercises
+
+#### Icons with special meaning
+
+:pencil2: - A task you should do  
+:book: - A section of text to read (no tasks, just information).  
+:bulb: - Additional information.  
+:exclamation: - Something important.  
+:question: - Open-ended question for the reader ("What do you think would happen if...")  
+:poop: - Bad practice (don't-do-this)  
+:star: - A bonus task (not required)  
+
+#### Keyboard keys
+
+Will look like this:
+
+<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>C</kbd>
+
+#### Diff blocks
+
+Emphasizes how lines of text should change.
+
+```diff
+- this text was removed
++ and replaced with this text
+```
+
 
 ## Helpful resources
 > **Note:** Avoid W3Schools.com. It's often outdated by todays web specifications. Use MDN instead.
