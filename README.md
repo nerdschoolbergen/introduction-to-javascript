@@ -14,7 +14,7 @@ This lesson is oriented around teaching you how to use Javascript client-side in
 
 ## How to get started
 
-* Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the the "Download ZIP" button to the right.
+* Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the "Download ZIP" button to the right.
 * Although you have this readme file on your computer it's easier to read it on GitHub, so we recommend you keep this page open with the exercise tasks.
 
 ## Exercises
