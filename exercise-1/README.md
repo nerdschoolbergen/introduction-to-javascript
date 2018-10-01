@@ -39,7 +39,7 @@ The result should be a box popping up saying 'Hello world!'. How exciting!
 
 All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipulate the web page markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the web page is represented as a node in the tree.
 
-This is what the DOM structure of `exercise1.html` looks like:
+This is what the DOM structure of `exercise1.html` looks like, with the `script`-tag now located in the `<head>`-section (collapsed in image below).
 
 ![](../exercise-1_3-1.png)
 
