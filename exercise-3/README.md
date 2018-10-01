@@ -50,7 +50,7 @@ myFunction();
 
 :exclamation: We just called this a self-executing function, but it's really known as an Immediately Invoked Function Expression or IIFE, pronounced "iffy". All you need to remember is that it's a function which invokes itself.
 
-:pencil2: Inside the self-executing function, create a data structure that represents yourself. Make a variable that contains the following:
+:pencil2: Inside the self-executing function, create an object that represents yourself. Make a variable that contains the following:
   - A property containing your name
   - A property containing your age
   - An _array_ of your 3 favorite foods
@@ -63,11 +63,14 @@ myFunction();
 > - Creating an object can look like: `var hellworld = { hello: 'world'}` where `hello` is the property name and `world` is the property's value.
 > - Creating an array can look like: `var fruits = ['apples', 'bananas']`.
 
-:pencil2: Create a function named `presentMyself` that takes one parameter which will be the data structure you just made.
+:pencil2: Create a function named `presentMyself` that takes one parameter, which will be the object you just made.
 
 :pencil2: In this function, create a variable with the default value of an empty string.
 
 :pencil2: Make the necessary logic to make up the text `Hello, my name is {name}. I'm {age} years old and my favorite movies are {LEAST-liked-move} which is directed by {director} and stars {star}, {medium-liked-movie} which is directed by {director} and stars {star}, and {MOST-liked-movie} which is directed by {director} and stars {star}.`
+
+:exclamation: Tip:
+Use a for-loop to enumerate the content of your favorite movies, so that you do not have to type it out manually. This also allows you to add as many movies you want in the future.
 
 :exclamation: Tip:
 As you will notice, the listing of the movies are in the _opposite_ order of how they are entered into the list.

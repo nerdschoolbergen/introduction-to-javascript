@@ -15,18 +15,18 @@ You will learn to:
 
 :pencil2: In `exercise4.html`, add a script tag in the `<body>`. A script tag example: `<script src="path/to/.js/file"></script>`
 
+## 4.2 - Find the highest number
+
+:pencil2: Inside `exercise4.js`, create a function named `findHighestNum` which takes no parameters.
+
+:pencil2: This function should continuously prompt the user for a number and remember the highest number found until the user enters zero.
+
 This is an example of how a simple script with user interaction.
 
 ```javascript
 var input = prompt('Enter something here'); // Displays a pop-up textbox in the browser
 document.write(input); // Writes to the document/page
 ```
-
-## 4.2 - Find the highest number
-
-:pencil2: Inside `exercise4.js`, create a function named `findHighestNum` which takes no parameters.
-
-:pencil2: This function should continuously prompt the user for a number and remember the highest number found until the user enters zero.
 
 :exclamation: Tips:
 > - Probably need to convert the input _string_ to a _number_ of some kind

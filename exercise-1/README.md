@@ -56,10 +56,11 @@ Refresh the page (hit <kbd>F5</kbd> or <kbd>CTLR</kbd> + <kbd>R</kbd> / <kbd>CMD
 
 Apparently nothing happened so it's time to take on our CSI hat.
 
-:pencil2: Open the Chrome Dev Tools by doing one of the following:
-  - Select **More Tools > Developer Tools** from the Chrome Menu.
-  - Right-click on a page element and select Inspect
-  - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
+:pencil2: Open the Chrome or Firefox Devloper Tools by doing one of the following:
+  - **Using Google Chrome:** Select **More Tools > Developer Tools** from the Chrome Menu.
+  - **Using Firefox:** Select the hamburger menu at the top right corner of the browser, select `Web Developer` and click `Toggle Tools`.
+  - **Firefox/Chrome**: Right-click on a page element and select Inspect
+  - **Firefox/Chrome**: Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
 :pencil2: Go to the Console panel. (Don't worry about all the other buttons and panels, we will revisit DevTools in the next exercise.). Refresh the page again.
 
 ```javascript

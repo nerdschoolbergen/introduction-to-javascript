@@ -28,8 +28,11 @@ For example:
 function buttonClickHandler(event) {
   alert('Click event!');
   console.log('event:', event);
+  event.preventDefault();
 }
 ```
+
+:exclamation: Tip: `event.preventDefault()` tells the browser not to execute the normal action, which in the case of a `<input />` of type `submit`, would be to submit the form and refresh the page.
 
 This is the html for a submit button:
 ```html
@@ -68,17 +71,21 @@ We told the browser to send `click` events from the "Add" button to the `buttonC
 
 :pencil2: In `bonus1.js`, do the following:
 - Find out how to query the DOM  for `ul` (list) elements and assign the result to a variable.
-- Do the same for the text field element.
+- Do the same for the text field (the `input`-field of type `text`) element.
 - Do the same for the `form` element as well.
 - Declare a function called `submitFormHandler` that takes an `event` parameter and logs it to the console.
 - **:exclamation: in the `submitFormHandler` function, call `event.preventDefault()` as the last action in the function.** This is to prevent the submit event from "bubbling up" to the browser and refreshing the page.
 	* Register the `submitFormHandler` you just declared as an event listener on the `form` element, listening for `submit` events.
-
-- Type something into the input box and click "Add". You should see the text you typed in to the input box displayed in the JavaScript console.
+	* `console.log` the output of the event. See if you can find a way to extract the value of the text-field. (Hint: Check out `event.target`).
+	* Once you have identified the source of the content for the text-field, print its content using `console.log`, inside of your `submitFormHandler`.
+	* Write something into the input box and click "Add". You should see the text you typed in to the input box displayed in the JavaScript console.
+	* Find out how to query the `ul` element in the DOM, and try appending a value to the list (Create a new `<li>` element, and append it to the `ul` element).
 
 ### 5.2.2 - Creating tasks
+You will see that just appending text to the list does not look very nice. We will dynamically create `<li>`-elements which contain a checkbox and a label, like the entries you can see in the `bonus1.html`.
 
-When the user submits the task a new `<li>` element should be added to the bottom of the list.
+:exclamation: Tip: Check out the `setAttribute`-function on DOM-elements. [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute).
+
 :pencil2: To do this, add a new function called `createTaskElement` which takes the description (the user input) as a parameter. Inside the function:
 	* Create a new list element (`<li>`)
 	* Create a new input element of type checkbox
