@@ -3,7 +3,7 @@
 # Introduction to JavaScript
 JavaScript is the most used language today, and there is no escaping it. In this lession, you will learn the basics of the language. The lesson will also include a brief introduction to how the web works.
 
-## [Open presentation slides](https://docs.google.com/presentation/d/14yA_gPiQLdHZogf4ViZR9ja34baBzf2VA2P0EuXflOk/edit?usp=sharing)
+## [Open presentation slides](https://docs.google.com/presentation/d/12TT-N3Gf80QzmVyvt9PidUXtcZEFlffOx87O_Co82I8/edit)
 
 ## Focus of this lesson
 This lesson is oriented around teaching you how to use Javascript client-side in the browser. In order to get the most out of the lesson it helps if you have some past experience with web technologies such as HTML and HTTP.
