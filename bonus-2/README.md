@@ -9,12 +9,12 @@ You will learn how to:
 
 ## Required software and tools for this exercise
 
-- Browser: [Chrome](https://www.google.com/chrome)
-- Code editor: [Visual Studio Code](https://code.visualstudio.com)
+- [Chrome](https://www.google.com/chrome)
+- [Visual Studio Code](https://code.visualstudio.com)
 
 ## 6.1 - IIFEs, strict mode, objects and arrays
 
-- Open `bonus2.html` in Chrome and Atom. Open `bonus2.js` in Atom as well.
+- Open `bonus2.html` in Chrome and Visual Studio Code. Open `bonus2.js` in Visual Studio Code as well.
 - Copy the script you made from the previous task (`bonus2.js`) into `bonus2.js`
 
 ### IIFEs
