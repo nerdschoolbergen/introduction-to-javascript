@@ -1,23 +1,27 @@
-![JavaScript](https://www.unixstickers.com/image/cache/data/stickers/js/js.sh-180x180.png)
+![JavaScript](js.png)
 
 # Introduction to JavaScript
+
 JavaScript is the most used language today, and there is no escaping it. In this lession, you will learn the basics of the language. The lesson will also include a brief introduction to how the web works.
 
 ## [Open presentation slides](https://docs.google.com/presentation/d/12TT-N3Gf80QzmVyvt9PidUXtcZEFlffOx87O_Co82I8/edit)
 
 ## Focus of this lesson
+
 This lesson is oriented around teaching you how to use Javascript client-side in the browser. In order to get the most out of the lesson it helps if you have some past experience with web technologies such as HTML and HTTP.
 
 ## What you need
+
 - A browser: [Chrome](https://www.google.com/chrome)
 - A code editor: [Atom](https://atom.io/), [VS Code](https://code.visualstudio.com/)
 
 ## How to get started
 
-* Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the "Download ZIP" button to the right.
-* Although you have this readme file on your computer it's easier to read it on GitHub, so we recommend you keep this page open with the exercise tasks.
+- Start by cloning this repository into a folder on your computer. If you've never used git before, you can alternatively use the "Download ZIP" button to the right.
+- Although you have this readme file on your computer it's easier to read it on GitHub, so we recommend you keep this page open with the exercise tasks.
 
 ## Exercises
+
 This repository contains a set of exercises organized in folders. Each folder contains a `README.md` describing the exercise.
 
 - [Exercise 1](exercise-1/)
@@ -30,7 +34,6 @@ This repository contains a set of exercises organized in folders. Each folder co
 - [Bonus part 1](bonus-1/)
 - [Bonus part 2](bonus-2/)
 
-
 ### Symbols and notation used in exercises
 
 #### Icons with special meaning
@@ -41,7 +44,7 @@ This repository contains a set of exercises organized in folders. Each folder co
 :exclamation: - Something important.  
 :question: - Open-ended question for the reader ("What do you think would happen if...")  
 :poop: - Bad practice (don't-do-this)  
-:star: - A bonus task (not required)  
+:star: - A bonus task (not required)
 
 #### Keyboard keys
 
@@ -58,8 +61,8 @@ Emphasizes how lines of text should change.
 + and replaced with this text
 ```
 
-
 ## Helpful resources
+
 > **Note:** Avoid W3Schools.com. It's often outdated by todays web specifications. Use MDN instead.
 
 - `javaScriptCheatSheet.js` - A file located at the root of this repository, containing a condensed overview of common Javascript syntax
