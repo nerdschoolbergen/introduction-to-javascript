@@ -1,4 +1,4 @@
-![JavaScript](js.png)
+<img src="js.png" alt="JavaScript" width="150" />
 
 # Introduction to JavaScript
 
