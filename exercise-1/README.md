@@ -1,19 +1,21 @@
 # Exercise 1 - Hello world
+
 This exercise will get you started learning the basics of JavaScript in the browser.
 
 You will learn how to:
- - Set up your development environment
- - Create "Hello world"
- - Make your code interact with the web page
+
+- Set up your development environment
+- Create "Hello world"
+- Make your code interact with the web page
 
 ## Required software and tools for this exercise
-- [Google Chrome]()
-- A code editor (e.g. [Atom](https://atom.io/) or [VS Code](https://code.visualstudio.com/))
 
+- [Chrome](https://www.google.com/chrome)
+- [Visual Studio Code](https://code.visualstudio.com)
 
 ## 1.1 - Dev environment
 
-:pencil2: Open `exercise1.html` both in Chrome and Atom. Make sure changes to the HTML file are reflected in the browser.
+:pencil2: Open `exercise1.html` both in Chrome and Visual Studio Code. Make sure changes to the HTML file are reflected in the browser.
 
 ## 1.2 - "Hello world"
 
@@ -23,7 +25,7 @@ You will learn how to:
 
 ```html
 <script>
-  alert('Hello world!');
+  alert("Hello world!");
 </script>
 ```
 
@@ -48,8 +50,8 @@ We are going to use a DOM API method called `querySelector` to replace some text
 :pencil2: Replace the contents of the `<script>` element we created in the last example with the following code:
 
 ```javascript
-var paragraph = document.querySelector('p');
-paragraph.innerHTML = 'Hello Nerdschool';
+var paragraph = document.querySelector("p");
+paragraph.innerHTML = "Hello Nerdschool";
 ```
 
 Refresh the page (hit <kbd>F5</kbd> or <kbd>CTLR</kbd> + <kbd>R</kbd> / <kbd>CMD</kbd> + <kbd>R</kbd>).
@@ -57,11 +59,12 @@ Refresh the page (hit <kbd>F5</kbd> or <kbd>CTLR</kbd> + <kbd>R</kbd> / <kbd>CMD
 Apparently nothing happened so it's time to take on our CSI hat.
 
 :pencil2: Open the Chrome or Firefox Devloper Tools by doing one of the following:
-  - **Using Google Chrome:** Select **More Tools > Developer Tools** from the Chrome Menu.
-  - **Using Firefox:** Select the hamburger menu at the top right corner of the browser, select `Web Developer` and click `Toggle Tools`.
-  - **Firefox/Chrome**: Right-click on a page element and select Inspect
-  - **Firefox/Chrome**: Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
-:pencil2: Go to the Console panel. (Don't worry about all the other buttons and panels, we will revisit DevTools in the next exercise.). Refresh the page again.
+
+- **Using Google Chrome:** Select **More Tools > Developer Tools** from the Chrome Menu.
+- **Using Firefox:** Select the hamburger menu at the top right corner of the browser, select `Web Developer` and click `Toggle Tools`.
+- **Firefox/Chrome**: Right-click on a page element and select Inspect
+- **Firefox/Chrome**: Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
+  :pencil2: Go to the Console panel. (Don't worry about all the other buttons and panels, we will revisit DevTools in the next exercise.). Refresh the page again.
 
 ```javascript
 exercise1.html:13 Uncaught TypeError: Cannot set property 'innerHTML' of null
@@ -71,15 +74,15 @@ Looks like we're trying to set `innerHTML` on something that's `null`. It's not 
 
 :pencil2: Between the two existing lines, add the following:
 
-~~~~javascript
-console.log('The current paragraph is:', paragraph);
-~~~~
+```javascript
+console.log("The current paragraph is:", paragraph);
+```
 
 Refresh the page with the Console panel in DevTools still open.
 
-~~~~
+```
 The current paragraph is: null
-~~~~
+```
 
 Well we already knew that, but becoming comfortable with `console.log()` is crucial. This is one of your primary tools of inspecting what's going on at runtime.
 
@@ -93,7 +96,7 @@ The DOM is read sequentially from top to bottom. As the code is now, our `<scrip
 
 Refresh your page. The result should be the text 'Hello Nerdschool' displaying in the paragraph below the heading.
 
-  ![](../exercise-1_3-2.png)
+![](../exercise-1_3-2.png)
 
 :pencil2: Try replacing the text with something else, then refreshing the page.
 

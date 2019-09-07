@@ -2,12 +2,14 @@
 
 You will need to interact with the browser a bit to prompt the user to give input and to write the result to the screen. Here are some examples to get you started.
 
-You will learn to: 
-- 
+You will learn to:
+
+-
 
 ## Required software and tools for this exercise
-- [Google Chrome]()
-- A code editor (e.g. [Atom](https://atom.io/) or [VS Code](https://code.visualstudio.com/))
+
+- [Chrome](https://www.google.com/chrome)
+- [Visual Studio Code](https://code.visualstudio.com)
 
 ## 4.1 - User interaction
 
@@ -24,11 +26,12 @@ You will learn to:
 This is an example of how a simple script with user interaction.
 
 ```javascript
-var input = prompt('Enter something here'); // Displays a pop-up textbox in the browser
+var input = prompt("Enter something here"); // Displays a pop-up textbox in the browser
 document.write(input); // Writes to the document/page
 ```
 
 :exclamation: Tips:
+
 > - Probably need to convert the input _string_ to a _number_ of some kind
 > - "continuously prompt" probably means some kind of endless loop...
 

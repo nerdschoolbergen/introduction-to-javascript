@@ -12,8 +12,8 @@ This lesson is oriented around teaching you how to use Javascript client-side in
 
 ## What you need
 
-- A browser: [Chrome](https://www.google.com/chrome)
-- A code editor: [Atom](https://atom.io/), [VS Code](https://code.visualstudio.com/)
+- Browser: [Chrome](https://www.google.com/chrome)
+- Code editor: [Visual Studio Code](https://code.visualstudio.com)
 
 ## How to get started
 

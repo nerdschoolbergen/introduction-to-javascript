@@ -3,43 +3,46 @@
 This exercise will get you started learning the anatomy of a web page with the help of Chrome DevTools.
 
 You will learn how to:
- - Write some basic HTML and insert an image into the page
- - Use the _Elements_ panel in Chrome DevTools
- - Create a separate file to contain your JavaScript code
- - Use the _Network_ panel in Chrome DevTools
 
+- Write some basic HTML and insert an image into the page
+- Use the _Elements_ panel in Chrome DevTools
+- Create a separate file to contain your JavaScript code
+- Use the _Network_ panel in Chrome DevTools
 
 ## Required software and tools for this exercise
-- [Google Chrome]()
-- A code editor (e.g. [Atom](https://atom.io/) or [VS Code](https://code.visualstudio.com/))
+
+- [Chrome](https://www.google.com/chrome)
+- [Visual Studio Code](https://code.visualstudio.com)
 
 ## 2.1 - Writing some basic HTML
 
 ### What is HTML?
- > :exclamation: HTML is a **markup language**. HTML separates "content" (words, images, audio, video, and so on) from "presentation" (instructions for displaying each type of content). HTML uses a pre-defined set of elements to define content types. Elements contain one or more "elements" that contain or express content. elements are enclosed by angle brackets, and the closing element begins with a forward slash. (developer.mozilla.org)
 
- Basic HTML structure:
+> :exclamation: HTML is a **markup language**. HTML separates "content" (words, images, audio, video, and so on) from "presentation" (instructions for displaying each type of content). HTML uses a pre-defined set of elements to define content types. Elements contain one or more "elements" that contain or express content. elements are enclosed by angle brackets, and the closing element begins with a forward slash. (developer.mozilla.org)
 
- ```html
- <!DOCTYPE html>
- <html>
-   <head>
-     <title>Title of my page</title>
-   </head>
-   <body>
-     Some text
-   </body>
- </html>
- ```
+Basic HTML structure:
 
-* The `<!DOCTYPE html>` tag at the top tells the browser that we are using version 5 of the HTML standard.
-* The `<html>` element surrounds all elements in the page.
-* The `<head>` elements contains element that define meta data about the contents of the page, for instance the `<title>`.
-* The `<body>` element surrounds the page content.
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of my page</title>
+  </head>
+  <body>
+    Some text
+  </body>
+</html>
+```
+
+- The `<!DOCTYPE html>` tag at the top tells the browser that we are using version 5 of the HTML standard.
+- The `<html>` element surrounds all elements in the page.
+- The `<head>` elements contains element that define meta data about the contents of the page, for instance the `<title>`.
+- The `<body>` element surrounds the page content.
 
 > ![MDN](../mdn.png) Read more about HTML here: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction
 
 ### 2.1.1 - Adding a heading and a paragraph
+
 :pencil2: Open `exercise2.html` in Chrome and in your code editor.
 
 :pencil2: Locate the empty `<body>`-element. This is where we will be adding some markup.
@@ -50,9 +53,10 @@ You will learn how to:
 
 :pencil2: Refresh the page in the browser. The result should look something like this:
 
-  ![](../exercise-2_1.png)
+![](../exercise-2_1.png)
 
 > ![MDN](../mdn.png) Read more about the heading and paragraph elements here:
+
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
 
@@ -63,23 +67,23 @@ You will learn how to:
 :pencil2: Create a sub folder called `images` inside the folder containing `exercise2.html`
 
 :pencil2: Move your image file into the `images` folder. The resulting folder structure should look like this:
-  ![](../exercise-2_2.png)
+![](../exercise-2_2.png)
 
 :pencil2: To display the image in the web page, we need to add an `<img/>` element. The img element does not have a closing element. **Note the `/` at the end of the element**:
 
-  ```html
-  <img src="" alt="My amazing image" />
-  ```
+```html
+<img src="" alt="My amazing image" />
+```
 
 If you refresh the browser, no image will be displayed yet. We need to set the `src` attribute to the relative path of the image in the `images` folder on your computer:
 
-  ```html
-  <img src="images/my-image.png" alt="My amazing image" />
-  ```
+```html
+<img src="images/my-image.png" alt="My amazing image" />
+```
 
 > :exclamation: The `alt` attribute ("Alternate text") is used to specify a descriptive text that should be displayed if the image cannot be loaded. It is also important for accessibility (screen readers).
 
-:pencil2:  Refresh the page. The result should be something like this:
+:pencil2: Refresh the page. The result should be something like this:
 ![](../exercise-2_3.png)
 
 > :exclamation: Having trouble displaying the image? Double check that the the path to the file in the `src` attribute is correct. Also verify that the syntax of the `<img/>` element is correct. Still not working? Open the _Console_ panel in Chrome DevTools like in Exercise 1 to debug.
@@ -91,9 +95,10 @@ If you refresh the browser, no image will be displayed yet. We need to set the `
 We can use the Elements panel in Chrome DevTools to make changes to the DOM (and CSS) on the fly in the browser.
 
 :pencil2: Open the Chrome Dev Tools by doing one of the following:
-  - Select **More Tools > Developer Tools** from the Chrome Menu.
-  - Right-click on a page element and select Inspect
-  - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
+
+- Select **More Tools > Developer Tools** from the Chrome Menu.
+- Right-click on a page element and select Inspect
+- Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
 
 You should now see the _Elements_ panel displaying the DOM tree of your page:
 ![](../exercise-2_4.png)
@@ -116,15 +121,15 @@ In Exercise 1 we created some simple JavaScript inside a `<script>` element in t
 
 :pencil2: Add the following code to the `exercise2.js` file
 
-  ```javascript
-  alert('Hello from an external JavaScript file!')
-  ```
+```javascript
+alert("Hello from an external JavaScript file!");
+```
 
 :pencil2: To make your web page load this script, we need to add a `<script>` element with an `src` attribute (like we did with the image):
 
-  ```html
-  <script src=""></script>
-  ```
+```html
+<script src=""></script>
+```
 
 :question: Can you guess what the value of the `src` attribute needs to be in order to load your script? Hint: Take a look at the image source path.
 
@@ -140,28 +145,32 @@ background HTTP requests.
 :pencil2: Open the following URL in Chrome: http://output.jsbin.com/redoqo
 
 :pencil2: Open the Chrome Dev Tools by doing one of the following:
-  - Select **More Tools > Developer Tools** from the Chrome Menu.
-  - Right-click on a page element and select Inspect
-  - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
+
+- Select **More Tools > Developer Tools** from the Chrome Menu.
+- Right-click on a page element and select Inspect
+- Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
 
 :pencil2: Select the _Network_ panel. Notice that the panel is empty. This is because we need to have the panel open when the page loads in order to record network activity. Press `CTRL+R` (Windows) or `CMD+R` (Mac) to refresh the page and record.
 
 :pencil2: You should now see a list containing multiple requests. A short description of some of the columns in the list:
-  - Method: The HTTP Verb (GET, POST, PUT, etc.) used in the request
-  - Status: The current status of the request (200, 404, 500, etc.)
-  - Type: The type of the requested resource (png, script, document, stylesheet)
-  - Size: The size of the response
-  - Time: The total duration of the request
+
+- Method: The HTTP Verb (GET, POST, PUT, etc.) used in the request
+- Status: The current status of the request (200, 404, 500, etc.)
+- Type: The type of the requested resource (png, script, document, stylesheet)
+- Size: The size of the response
+- Time: The total duration of the request
 
 :pencil2: The page contains a request to a image called `fire.gif`. See if you can locate the request in the list:
-  * How big is the image?
-  * How long did it take to download and display the image?
-  * What is the status of the request?
+
+- How big is the image?
+- How long did it take to download and display the image?
+- What is the status of the request?
 
 :pencil2: Open the following page: http://output.jsbin.com/rezuhiv
 :pencil2: Follow the steps above to record network activity
 :question: Can you spot what's wrong by looking at the list of requests? (Hint: Errors are light-red).
-  * What is the status code of the failed request?
+
+- What is the status code of the failed request?
 
 > :book: Read more about the _Network_ panel in DevTools here: https://developers.google.com/web/tools/chrome-devtools/network-performance/resource-loading
 

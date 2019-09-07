@@ -3,13 +3,15 @@
 First, we must create the structure we need to write some javascript. We never write javascript directly in html files, we make `.js` files which we reference in html.
 
 You will learn to:
+
 - Use basic functionality of javascript
 - Creating DOM elements
 - Storing information in the browser
 
 ## Required software and tools for this exercise
-- [Google Chrome]()
-- A code editor (e.g. [Atom](https://atom.io/) or [VS Code](https://code.visualstudio.com/))
+
+- [Chrome](https://www.google.com/chrome)
+- [Visual Studio Code](https://code.visualstudio.com)
 
 ## 3.1 - Javascript language constructs
 
@@ -19,7 +21,7 @@ You will learn to:
 
 :pencil2: In `exercise3.html`, add a script tag in the `<body>`. A script tag example: `<script src="path/to/.js/file"></script>`
 
-:pencil2: Add a simple message box in the `.js` file to verify it is loaded correctly:  `alert('hi there')`
+:pencil2: Add a simple message box in the `.js` file to verify it is loaded correctly: `alert('hi there')`
 
 Now, let's explore some of the basic language constructs.
 
@@ -31,35 +33,35 @@ If we wrap all our code inside a function, we ensure all code we write is scoped
 
 :exclamation: Functions are the main construct for _encapsulation_ in JavaScript. In Java or C# we would use a _class_ to achieve encapsulation. JavaScript is all about _functions_.
 
-~~~~javascript
+```javascript
 // exercise3.js
 
 (function() {
   // our code goes here...
 })();
-~~~~
+```
 
 You might be wondering what the extra parenthesis at the very end means. This is a self-executing function. It's the equivalent of:
 
-~~~~javascript
-function myFunction() {
-
-}
+```javascript
+function myFunction() {}
 myFunction();
-~~~~
+```
 
 :exclamation: We just called this a self-executing function, but it's really known as an Immediately Invoked Function Expression or IIFE, pronounced "iffy". All you need to remember is that it's a function which invokes itself.
 
 :pencil2: Inside the self-executing function, create an object that represents yourself. Make a variable that contains the following:
-  - A property containing your name
-  - A property containing your age
-  - An _array_ of your 3 favorite foods
-  - An _array_ of _objects_ where each object represents your 3 favorite movies.
-    - Each object should have a property with the movie's name.
-    - Each object should have property `credits` which is another, nested object. This nested object should have two properties, one for `director`, one for `star`, where the value is the name of the director and the name of the main star actor or actress. If you don't remember who this is, just use make up fake names to save time.
-    - Put the movies in the order of your most to least liked so that your most liked movie is at the _first_ position in the array and the least liked movie is _last_.
+
+- A property containing your name
+- A property containing your age
+- An _array_ of your 3 favorite foods
+- An _array_ of _objects_ where each object represents your 3 favorite movies.
+  - Each object should have a property with the movie's name.
+  - Each object should have property `credits` which is another, nested object. This nested object should have two properties, one for `director`, one for `star`, where the value is the name of the director and the name of the main star actor or actress. If you don't remember who this is, just use make up fake names to save time.
+  - Put the movies in the order of your most to least liked so that your most liked movie is at the _first_ position in the array and the least liked movie is _last_.
 
 :exclamation: Hints:
+
 > - Creating an object can look like: `var hellworld = { hello: 'world'}` where `hello` is the property name and `world` is the property's value.
 > - Creating an array can look like: `var fruits = ['apples', 'bananas']`.
 
@@ -78,11 +80,12 @@ As you will notice, the listing of the movies are in the _opposite_ order of how
 :pencil2: Using only JavaScript, create a new DOM element to hold the text you just made, and insert it into the html page. We typically use `<p>` elements for text.
 
 :exclamation: Tips:
+
 > - `document.createElement()` will be useful here. https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 
 > - `document.body.appendChild()` may also be useful. https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
 
-* Log the string to `console` and inspect the printed string in the browser's Console.
+- Log the string to `console` and inspect the printed string in the browser's Console.
 
 ## 3.2 - Storing the info
 
