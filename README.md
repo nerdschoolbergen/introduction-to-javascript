@@ -4,7 +4,7 @@
 
 JavaScript is the most used language today, and there is no escaping it. In this lession, you will learn the basics of the language. The lesson will also include a brief introduction to how the web works.
 
-## [Open presentation slides](https://docs.google.com/presentation/d/12TT-N3Gf80QzmVyvt9PidUXtcZEFlffOx87O_Co82I8/edit)
+## [Open presentation slides](https://docs.google.com/presentation/d/1qQtwEmrWAy27v1ApGew76wZM3tqYvBlIfD0GSSEm9LY/edit?usp=sharing)
 
 ## Focus of this lesson
 
