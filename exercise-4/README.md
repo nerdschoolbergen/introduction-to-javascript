@@ -2,10 +2,6 @@
 
 You will need to interact with the browser a bit to prompt the user to give input and to write the result to the screen. Here are some examples to get you started.
 
-You will learn to:
-
--
-
 ## Required software and tools for this exercise
 
 - [Chrome](https://www.google.com/chrome)
