@@ -167,7 +167,9 @@ background HTTP requests.
 - What is the status of the request?
 
 :pencil2: Open the following page: http://output.jsbin.com/rezuhiv
+
 :pencil2: Follow the steps above to record network activity
+
 :question: Can you spot what's wrong by looking at the list of requests? (Hint: Errors are light-red).
 
 - What is the status code of the failed request?
