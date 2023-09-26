@@ -163,7 +163,7 @@ background HTTP requests.
 :pencil2: The page contains a request to a image called `fire.gif`. See if you can locate the request in the list:
 
 - How big is the image?
-- How long did it take to download and display the image?
+- How long did it take to download the image?
 - What is the status of the request?
 
 :pencil2: Open the following page: http://output.jsbin.com/rezuhiv
