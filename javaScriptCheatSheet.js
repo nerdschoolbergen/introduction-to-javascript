@@ -57,25 +57,27 @@ var cars = [
 var norway = {
     regions: [
         {
-            name: 'Sogn of Fjordane',
-            population: 109000,
+            name: 'Vestland',
+            population: 651299,
             counties: [
-                { name: 'Høyanger' },
-                { name: 'Førde' }
+                { name: 'Bergen' },
+                { name: 'Voss' },
+                { name: 'Årdal' }
             ]
         },
         {
-            name: 'Hordaland',
-            population: 511357,
+            name: 'Rogaland',
+            population: 499417,
             counties: [
-                { name: 'Bergen' },
-                { name: 'Voss' }
+                { name: 'Stavanger' },
+                { name: 'Haugesund' },
+                { name: 'Sandnes' }
             ]
         }
     ]
 };
-var førde = norway.regions[0].counties[1].name;
-var bergen = norway.regions[1].counties[0].name;
+var bergen = norway.regions[0].counties[0].name;
+var sandnes = norway.regions[1].counties[2].name;
 
 //
 // === Functions ===
