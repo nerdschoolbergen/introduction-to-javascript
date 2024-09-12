@@ -69,7 +69,8 @@ Apparently nothing happened so it's time to take on our detective hat 🕵️.
 - **Using Firefox:** Select the hamburger menu at the top right corner of the browser, select `Web Developer` and click `Toggle Tools`.
 - **Firefox/Chrome**: Right-click on a page element and select Inspect
 - **Firefox/Chrome**: Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
-  :pencil2: Go to the Console panel. (Don't worry about all the other buttons and panels, we will revisit DevTools in the next exercise.). Refresh the page again.
+
+:pencil2: Go to the Console panel. (Don't worry about all the other buttons and panels, we will revisit DevTools in the next exercise.). Refresh the page again.
 
 ```javascript
 exercise1.html:13 Uncaught TypeError: Cannot set property 'innerHTML' of null
@@ -93,7 +94,7 @@ Well we already knew that, but becoming comfortable with `console.log()` is cruc
 
 Ok so back to our problem of a null paragraph. Can you guess why this is happening?
 
-No really, think about it a few second.
+No really, think about it for a few seconds.
 
 The DOM is read sequentially from top to bottom. As the code is now, our `<script></script>` block is executed before anything in the `<body>` is even read initially. So when we try to find a `<p>` element, none exists because the parser haven't found it yet.
 
