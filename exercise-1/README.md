@@ -13,6 +13,11 @@ You will learn how to:
 - [Chrome](https://www.google.com/chrome)
 - [Visual Studio Code](https://code.visualstudio.com)
 
+## Before you start
+
+- :pencil2: Start by cloning this repository into a folder on your computer if you haven't done so already. If you've never used git before, you can alternatively use the the "Download ZIP" button on the repo home page. Click the green "Code" button and then "Download Zip" <img src="https://docs.github.com/assets/cb-13128/mw-1440/images/help/repository/code-button.webp" width=400 />
+- :book: Although you have this `README.md` file on your computer, it's easier to read it on GitHub with formatting. We therefore recommend you keep a web browser tab open with the exercise tasks.
+
 ## 1.1 - Dev environment
 
 :pencil2: Open `exercise1.html` both in Chrome and Visual Studio Code. Make sure changes to the HTML file are reflected in the browser.
