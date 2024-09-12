@@ -61,7 +61,7 @@ paragraph.innerHTML = "Hello Nerdschool";
 
 Refresh the page (hit <kbd>F5</kbd> or <kbd>CTLR</kbd> + <kbd>R</kbd> / <kbd>CMD</kbd> + <kbd>R</kbd>).
 
-Apparently nothing happened so it's time to take on our CSI hat.
+Apparently nothing happened so it's time to take on our detective hat 🕵️.
 
 :pencil2: Open the Chrome or Firefox Devloper Tools by doing one of the following:
 
