@@ -142,7 +142,7 @@ alert("Hello from an external JavaScript file!");
 Lastly we will take a look at the _Network_ panel in Chrome DevTools. The Network panel lets you look at a timeline of what resources are loaded when you load the web page, such as the page itself, scripts, images, videos and
 background HTTP requests.
 
-:pencil2: Open the following URL in Chrome: https://jsbin.com/redoqo/13
+:pencil2: Open the following URL in Chrome: https://jsbin.com/luyixutage
 
 :pencil2: Open the Chrome Dev Tools by doing one of the following:
 
