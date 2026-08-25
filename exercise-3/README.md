@@ -87,6 +87,95 @@ As you will notice, the listing of the movies are in the _opposite_ order of how
 
 - Log the string to `console` and inspect the printed string in the browser's Console.
 
+<details>
+<summary>:key: Solution for 3.1 (try it yourself first!)</summary>
+
+`exercise3.html`:
+
+```html
+<body>
+  <h1>Task 1</h1>
+  <script src="scripts/exercise3.js"></script>
+</body>
+```
+
+`scripts/exercise3.js`:
+
+```javascript
+(function() {
+  var me = {
+    name: 'Ada',
+    age: 36,
+    favoriteFoods: ['pizza', 'sushi', 'tacos'],
+    favoriteMovies: [
+      {
+        name: 'The Matrix',
+        credits: {
+          director: 'The Wachowskis',
+          star: 'Keanu Reeves'
+        }
+      },
+      {
+        name: 'Alien',
+        credits: {
+          director: 'Ridley Scott',
+          star: 'Sigourney Weaver'
+        }
+      },
+      {
+        name: 'Jurassic Park',
+        credits: {
+          director: 'Steven Spielberg',
+          star: 'Sam Neill'
+        }
+      }
+    ]
+  };
+
+  function presentMyself(person) {
+    var text = '';
+
+    text += 'Hello, my name is ' + person.name + '. ';
+    text += "I'm " + person.age + ' years old and my favorite movies are ';
+
+    // Loop backwards so the least liked movie is mentioned first
+    for (var i = person.favoriteMovies.length - 1; i >= 0; i--) {
+      var movie = person.favoriteMovies[i];
+
+      if (i === 0) {
+        text += 'and ';
+      }
+
+      text += movie.name +
+        ' which is directed by ' + movie.credits.director +
+        ' and stars ' + movie.credits.star;
+
+      text += i > 0 ? ', ' : '.';
+    }
+
+    return text;
+  }
+
+  var presentation = presentMyself(me);
+  console.log(presentation);
+
+  var paragraph = document.createElement('p');
+  paragraph.innerHTML = presentation;
+  document.body.appendChild(paragraph);
+})();
+```
+
+Result:
+
+```
+Hello, my name is Ada. I'm 36 years old and my favorite movies are Jurassic Park which is
+directed by Steven Spielberg and stars Sam Neill, Alien which is directed by Ridley Scott
+and stars Sigourney Weaver, and The Matrix which is directed by The Wachowskis and stars
+Keanu Reeves.
+```
+
+</details>
+
 ## 3.2 - Storing the info
 
 There are some client side storage mechanisms we can use quite easily.
@@ -142,5 +231,37 @@ JSON is a lovely data structure to work with in JavaScript, since it's more or l
 Make sure you _parse_ the stored JSON string back to a JS object.
 
 :pencil2: Write the object to the Console and inspect it in the browser.
+
+<details>
+<summary>:key: Solution for 3.2 (try it yourself first!)</summary>
+
+Add the following inside the same self-executing function in `scripts/exercise3.js`:
+
+```javascript
+var storageKey = 'me';
+
+function saveMyself(person) {
+  var json = JSON.stringify(person);
+  window.sessionStorage.setItem(storageKey, json);
+}
+
+function getMyself() {
+  var json = window.sessionStorage.getItem(storageKey);
+  return JSON.parse(json);
+}
+
+saveMyself(me);
+console.log(getMyself());
+```
+
+The Value column in **DevTools > Application > Session Storage** now shows readable JSON instead of `[object Object]`:
+
+```json
+{ "name": "Ada", "age": 36, "favoriteFoods": ["pizza", "sushi", "tacos"], "favoriteMovies": [...] }
+```
+
+:exclamation: Note that `JSON.parse` gives you back a _new_ object, not the one you saved. Also, only data survives the round trip — functions and other non-JSON values are lost.
+
+</details>
 
 # [Go to exercise 4 =>](../exercise-4/README.md)
